@@ -1,0 +1,781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<!-- Facebook sharing information tags -->
+
+	<meta property="og:title" content="Subject of newsletter." />
+
+	<title>Title of Newsletter 1</title>
+
+	<style type="text/css">
+
+		/* Force Outlook to provide a "view in browser" button. */
+
+		#outlook a { padding: 0; }
+
+		body { width: 100% !important; }
+
+		.ReadMsgBody { width: 100%; }
+
+		/* Force Hotmail to display emails at full width */
+
+		.ExternalClass { width: 100%; }
+
+		/* Prevent Webkit platforms from changing default text sizes. */
+
+		body { -webkit-text-size-adjust: none; }
+
+		/* Reset Styles */
+
+		body {
+			margin: 0;
+			padding: 0;
+			}
+
+		img {
+			border: 0;
+			height: auto;
+			line-height: 100%;
+			outline: none;
+			text-decoration: none;
+			}
+
+		table td { border-collapse: collapse; }
+
+		#background{
+			height: 100% !important;
+			margin: 0;
+			padding: 0;
+			width: 100% !important;
+			}
+
+		/* Template Styles */
+
+		/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: COMMON PAGE ELEMENTS /\/\/\/\/\/\/\/\/\/\ */
+
+		/* Background Color */
+
+		body,
+		#background {
+			background-color: #fafafa;
+		}
+
+		/* Email Border */
+
+		#container {}
+
+		/* Heading One <h1> */
+
+		h1, .h1 {
+			color: #f27b21;
+			display: block;
+			font-family: Arial;
+			font-size: 18px;
+			font-weight: normal;
+			line-height: 100%;
+			text-transform: uppercase;
+			margin-top: 0;
+			margin-right: 0;
+			margin-bottom: 10px;
+			margin-left: 0;
+			text-align: left;
+		}
+
+		/* Heading Two <h2> */
+
+		h2, .h2 {
+			color: #f27b21;
+			display: block;
+			font-family: Arial;
+			font-size: 30px;
+			font-weight: normal;
+			line-height: 100%;
+			margin-top: 0;
+			margin-right: 0;
+			margin-bottom: 10px;
+			margin-left: 0;
+			text-align: left;
+		}
+
+		/* Heading Three <h3> */
+
+		h3, .h3 {
+			color: #f27b21;
+			display: block;
+			font-family: Arial;
+			font-size: 26px;
+			font-weight: normal;
+			line-height: 100%;
+			margin-top: 0;
+			margin-right: 0;
+			margin-bottom: 10px;
+			margin-left: 0;
+			text-align: left;
+		}
+
+		/* Heading Four <h4> */
+
+		h4, .h4 {
+			color: #f27b21;
+			display: block;
+			font-family: Arial;
+			font-size: 22px;
+			font-weight: normal;
+			line-height: 100%;
+			margin-top: 0;
+			margin-right: 0;
+			margin-bottom: 10px;
+			margin-left: 0;
+			text-align: left;
+		}
+
+		/* Preheader */
+
+		#preheader { background-color: #000000; }
+
+		/* Preheader */
+
+		#postfooter {
+			background-color: #fafafa;
+		}
+
+			/* Preheader Text */
+	
+			.postfooter-content div {
+				color: #333333;
+				font-family: Arial;
+				font-size: 10px;
+				line-height: 100%;
+				text-align: left;
+			}
+
+				/* Preheader Link */
+		
+				.postfooter-content div a:link,
+				.postfooter-content div a:visited,
+		
+				/* Yahoo! Mail Override */
+		
+				.postfooter-content div a .yshortcuts {
+					color: #6d8cc5;
+					font-weight: normal;
+					text-decoration: underline;
+				}
+
+		/* Header */
+
+		#header {
+			background-color: #fafafa;
+			border-bottom: 0;
+		}
+
+			/* Header Text */
+	
+			.header-content {
+				color: #333333;
+				font-family: Arial;
+				font-size: 34px;
+				font-weight: bold;
+				line-height: 100%;
+				padding: 0;
+				text-align: center;
+				vertical-align: middle;
+			}
+
+				/* Header Link */
+		
+				.header-content a:link,
+				.header-content a:visited,
+		
+				/* Yahoo! Mail Override */
+		
+				.header-content a .yshortcuts {
+					color: #6d8cc5;
+					font-weight: normal;
+					text-decoration: underline;
+				}
+		
+				#logo {
+					height: auto;
+					max-width: 600px;
+				}
+
+		/* Body Style */
+
+		#container,
+		.body-content {
+			background-color: #ffffff;
+		}
+
+			/* Body Text */
+	
+			.body-content div {
+				color: #333333;
+				font-family: Arial;
+				font-size: 12px;
+				line-height: 150%;
+				text-align: left;
+			}
+
+				/* Body Link */
+		
+				.body-content div a:link,
+				.body-content div a:visited,
+		
+				/* Yahoo! Mail Override */
+		
+				.body-content div a .yshortcuts {
+					color: #6d8cc5;
+					font-weight: normal;
+					text-decoration: underline;
+				}
+		
+				.body-content img {
+					display: inline;
+					height: auto;
+				}
+
+		/* Sidebar */
+
+		#sidebar {
+			background-color: #ffffff;
+			border-left: 0;
+			}
+
+			/* Sidebar Text */
+	
+			.sidebar-content div {
+				color: #333333;
+				font-family: Arial;
+				font-size: 11px;
+				line-height: 150%;
+				text-align: left;
+			}
+
+				#hello { margin-bottom: 36px; }
+
+					#hello h2 {
+						font-size: 16px;
+						color: #6d8cc5;
+					}
+
+				.refer-a-friend { margin-bottom: 10px; }
+				
+				.callout { margin-bottom: 10px; }
+				
+				.availability { margin-top: 50px; }
+
+					.availability h3 {
+						margin-bottom: 15px;
+						padding: 7px 15px;
+						font-size: 16px;
+						text-transform: uppercase;
+						color: #ffffff;
+						background-color: #f27b21;
+						}
+
+					.availability div { padding-left: 15px; }
+
+					.availability .store { margin-bottom: 20px; }
+
+						.availability h4 {
+							margin-bottom: 0;
+							font-size: 11px;
+							font-weight: bold;
+							color: #333333;
+							}
+
+				/* Sidebar Link */
+		
+				.sidebar-content div a:link,
+				.sidebar-content div a:visited,
+		
+				/* Yahoo! Mail Override */
+		
+				.sidebar-content div a .yshortcuts {
+					color: #6d8cc5;
+					font-weight: normal;
+					text-decoration: underline;
+				}
+		
+				.sidebar-content img {
+					display: inline;
+					height: auto;
+				}
+
+		/* Footer */
+
+		#footer {
+			background-color: #e6e6e6;
+			border-top: 0;
+			}
+
+			/* Footer Text */
+	
+			.footer-content div {
+				color: #333333;
+				font-family: Arial;
+				font-size: 12px;
+				line-height: 125%;
+				text-align: left;
+				}
+		
+				/* Footer Link */
+		
+				.footer-content div a:link,
+				.footer-content div a:visited,
+		
+				/* Yahoo! Mail Override */
+		
+				.footer-content div a .yshortcuts {
+					color: #6d8cc5;
+					font-weight: normal;
+					text-decoration: underline;
+					}
+		
+				.footer-content img { display: inline; }
+
+		/* Social */
+
+		#social { border: 0; }
+
+			#social div {
+				padding-left: 20px;
+				line-height: 0;
+				}
+
+				#social div img {}
+
+					#social div a:link,
+					#social div a:visited,
+
+					/* Yahoo! Mail Override */
+
+					#social div a .yshortcuts { margin-right: 8px; }
+
+		/* Copyright */
+
+		#copyright { background: #dadbdb; }
+
+			#copyright div {
+				padding-right: 10px;
+				padding-bottom: 10px;
+				color: #333333;
+				font-family: Arial;
+				font-size: 11px;
+				line-height: 125%;
+				text-align: right;
+				}
+
+				#copyright div a:link,
+				#copyright div a:visited,
+
+				/* Yahoo! Mail Override */
+
+				#copyright div a .yshortcuts {
+					color: #333333;
+					font-weight: normal;
+					text-decoration: none;
+					}
+
+		/* Utility */
+
+		#utility {
+			background-color: #fafafa;
+			border: 0;
+			}
+
+			#utility div { text-align: center; }
+
+	</style>
+
+</head>
+
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+
+	<center>
+
+		<!-- BEGIN Preheader -->
+
+		<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="preheader">
+
+			<tr>
+
+				<td align="center" valign="top">
+
+					<table border="0" cellpadding="0" cellspacing="0" width="600" id="">
+
+						<!-- BEGIN Tagline -->
+
+						<tr>
+
+							<td align="left" valign="top">
+
+								<table border="0" cellpadding="0" cellspacing="0" width="600" id="tagline">
+
+									<tr>
+
+										<td valign="top" width="504">
+
+											<img src="a/img/tagline.jpg" width="504" height="34" />
+
+										</td>
+
+										<td valign="top" width="96">
+
+											<div>
+
+												<a href="#">
+												
+													<img src="a/img/like-us.jpg" width="96" height="34" />
+													
+												</a>
+
+											</div>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+						</tr>
+
+						<!-- END Tagline -->
+
+					</table>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		<!-- END Preheader -->
+
+		<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="background">
+
+			<tr>
+
+				<td align="center" valign="top">
+
+					<!-- BEGIN Page -->
+
+					<table border="0" cellpadding="0" cellspacing="0" width="600" id="container">
+
+						<!-- BEGIN Header -->
+
+						<tr>
+
+							<td align="center" valign="top">
+
+								<table border="0" cellpadding="0" cellspacing="0" width="600" id="header">
+
+									<tr>
+
+										<td class="header-content">
+
+											<div>
+
+												<a href="#">
+												
+													<img src="a/img/logo.jpg" style="max-width: 600px;" id="logo" />
+													
+												</a>
+
+											</div>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+						</tr>
+
+						<!-- END Header -->
+
+						<!-- BEGIN Body -->
+
+						<tr>
+
+							<td align="center" valign="top" style="padding-top: 30px;">
+
+								<table border="0" cellpadding="0" cellspacing="0" width="600" id="body">
+
+									<tr>
+
+										<td valign="top">
+
+											<table border="0" cellpadding="0" cellspacing="0">
+
+												<tr>
+
+													<td valign="top" class="body-content">
+
+														<!-- Begin Module: Standard Content -->
+
+														<table border="0" cellpadding="20" cellspacing="0" width="100%">
+
+															<tr>
+
+																<td valign="top">
+
+																	<div>
+
+																		<h1 class="h1">Heading</h1>
+
+																		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in ipsum sit amet orci adipiscing luctus et at mi. Morbi ornare, nulla in tristique hendrerit, ante nunc interdum elit, ac luctus tortor est facilisis arcu. Nam placerat felis non velit luctus elementum. Proin sapien mauris, bibendum vel cursus at, tincidunt quis mi. Morbi mattis blandit magna a condimentum. Donec adipiscing ipsum sit amet magna tincidunt vitae commodo nunc bibendum. Quisque mattis tempus dui, non sodales risus viverra ut. Quisque placerat fringilla ipsum sed hendrerit. Fusce at sem lectus. Maecenas tincidunt consectetur tortor cursus varius. Quisque velit nunc, congue sed lacinia vel, mollis et arcu. Quisque hendrerit mi sagittis ante convallis quis rhoncus nisi tincidunt.</p>
+																		
+																		<p>Aenean in nisi augue. Nam vel nisl eget nulla volutpat fringilla. In elementum consequat tempus. Mauris in lacus tellus, eget bibendum ligula. Suspendisse lacus augue, egestas posuere aliquet nec, placerat pretium metus. Donec lacinia purus ac metus accumsan eu sagittis eros accumsan. In pulvinar mi hendrerit sem luctus in auctor libero vehicula. Morbi varius tempor nunc eu elementum.</p>
+
+																	</div>
+
+																</td>
+
+															</tr>
+
+														</table>
+
+														<!-- End Module: Standard Content -->
+
+													</td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+										<!-- BEGIN Sidebar -->
+
+										<td valign="top" width="240" id="sidebar">
+
+											<table border="0" cellpadding="0" cellspacing="0" width="240">
+
+												<tr>
+
+													<td valign="top" class="sidebar-content">
+
+														<table border="0" cellpadding="20" cellspacing="0" width="100%">
+
+															<tr>
+
+																<td valign="top">
+
+																	<div class="row" id="hello">
+
+																		<h2>Hello, Becky!</h2>
+
+																		<p>It&rsquo;s been 2 days since your last tan.</p>
+																		
+																	</div>
+
+																	<div class="row refer-a-friend">
+																	
+																		<a href="#">
+																		
+																			<img src="a/img/refer.jpg" alt="Refer a friend. Click call to action copy." style="max-width: 200px;" />
+																		
+																		</a>
+																	
+																	</div>
+
+																	<div class="row callout">
+																	
+																		<a href="#">
+																		
+																			<img src="a/img/callout.jpg" alt="Callout. Click to find out." style="max-width: 200px;" />
+																		
+																		</a>
+																	
+																	</div>
+																
+																	<div class="row availability">
+
+																		<h3>Callout</h3>
+
+																		<div class="store">
+
+																			<h4>Store Name</h4>
+																			Instant, Open Sun 10:50
+																			10/1/2012 at 11:15 am
+
+																		</div>
+
+																		<div class="store">
+
+																			<h4>Store Name</h4>
+																			Sunless, VersaSpa
+																			9/27/2012 at 9:00 am
+
+																		</div>
+
+																		<div><a href="#">View Callout Page</a></div>
+
+																	</div>
+
+																</td>
+															
+															</tr>
+
+														</table>
+
+													</td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+										<!-- END Sidebar -->
+
+									</tr>
+
+								</table>
+
+							</td>
+
+						</tr>
+
+						<!-- END Body -->
+
+						<!-- BEGIN Footer -->
+
+						<tr>
+
+							<td align="center" valign="top">
+
+								<table border="0" cellpadding="0" cellspacing="0" width="600" id="footer">
+
+									<tr>
+									
+										<td valign="top">
+										
+											<img src="a/img/footer-top.jpg" style="margin-bottom: 0 !important;" />
+											
+										</td>
+									
+									</tr>
+
+									<tr>
+
+										<td valign="top" class="footer-content">
+
+											<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+												<tr>
+
+													<td valign="top" width="240" height="20" id="social">
+
+														<div><a href="#"><img src="a/img/facebook.jpg" alt="Follow us on Facebook!" style="margin-bottom: 0 !important;" /></a> <a href="#"><img src="a/img/twitter.jpg" alt="Follow us on Twitter!" style="margin-bottom: 0 !important;" /></a> <a href="#"><img src="a/img/instagram.jpg" alt="Follow us on Instagram!" style="margin-bottom: 0 !important;" /></a> <a href="#"><img src="a/img/youtube.jpg" alt="Follow us on YouTube!" style="margin-bottom: 0 !important;" /></a> <a href="#"><img src="a/img/foursquare.jpg" alt="Follow us on Foursquare!" style="margin-bottom: 0 !important;" /></a> <a href="#"><img src="a/img/linkedin.jpg" alt="Follow us on LinkedIn!" style="margin-bottom: 0 !important;" /></a> <a href="#"><img src="a/img/pinterest.jpg" alt="Follow us on Pinterest!" style="margin-bottom: 0 !important;" /></a></div>
+
+													</td>
+
+													<td valign="top" height="20">
+													
+														<img src="a/img/footer-right.jpg" style="margin-bottom: 0 !important;" />
+													
+													</td>
+
+												</tr>
+
+											</table>
+
+										</td>
+
+									</tr>
+
+									<tr>
+									
+										<td valign="top">
+										
+											<img src="a/img/footer-bottom.jpg" style="margin-bottom: 0 !important;" />
+											
+										</td>
+									
+									</tr>
+
+									<tr>
+
+										<td valign="top" id="copyright">
+
+											<div><a href="#">Privacy Policy</a>&nbsp;&nbsp; | &nbsp;&nbsp;<a href="#">Terms of Use</a>&nbsp;&nbsp; | &nbsp;&nbsp;<span>&copy; 2013 Sun Tan City, LLC</span></div>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+						</tr>
+
+						<!-- END Footer -->
+
+					</table>
+
+					<!-- END Page -->
+
+					<!-- BEGIN Preheader -->
+
+					<table border="0" cellpadding="20" cellspacing="0" width="600" id="postfooter">
+
+						<tr>
+
+							<td valign="top" class="postfooter-content">
+
+								<table border="0" cellpadding="20" cellspacing="0" width="100%">
+
+									<tr>
+
+										<td valign="top">
+
+											<div>
+
+												<a href="#">Unsubscribe from this list</a> | <a href="#">Update subscription preferences</a>
+
+											</div>
+
+										</td>
+
+										<td valign="top" width="190">
+
+											<div>Is this email not displaying correctly?<br /><a href="#" target="_blank">View it in your browser</a>.</div>
+
+										</td>
+
+									</tr>
+
+								</table>
+
+							</td>
+
+						</tr>
+
+					</table>
+
+					<!-- END Preheader -->
+
+				</td>
+
+			</tr>
+
+		</table>
+
+	</center>
+
+</body>
+
+</html>

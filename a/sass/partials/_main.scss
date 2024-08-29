@@ -1,0 +1,6310 @@
+
+/*-------------------------------------------
+	Main
+-------------------------------------------*/
+
+
+#main {
+
+	#welcome.index &,
+	#new-account.invitation & {
+
+		@media screen and (min-width: 650px) {
+
+			padding-right: 130px;
+
+		}
+
+		@media screen and (min-width: 750px) {
+
+			padding-right: 150px;
+
+		}
+
+	}
+
+}
+
+
+/* Members Only */
+
+
+.members-only {
+
+	margin: 0 0 20px 0;
+	padding: 0 0 30px 0;
+	border-bottom: 1px solid rgb(188, 190, 192);
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		margin: 0;
+		padding: 0 20px 0 0;
+		border-bottom: none;
+		border-right: 1px solid rgb(188, 190, 192);
+
+	}
+
+	@media screen and (min-width: 750px) {
+
+		padding-right: 40px;
+
+	}
+
+}
+
+
+/* Create New Account */
+
+
+.create-new-account {
+
+	max-width: 400px;
+
+	.k-block {
+
+		margin: 0;
+
+	}
+
+		.title {
+
+			position: relative;
+			padding: 0 0 0 60px;
+
+			&:before {
+
+				position: absolute;
+				content: "";
+				width: 50px;
+				height: 50px;
+				left: 0;
+				top: 50%;
+				margin-top: -21px;
+				background: url(/a/img/icons.svg) -160px 0;
+				z-index: 5;
+
+				.no-svg & {
+
+					background-image: url(/a/img/icons.png);
+
+				}
+
+			}
+
+		}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 20px 0 0 20px;
+
+	}
+
+	@media screen and (min-width: 750px) {
+
+		padding-left: 40px;
+
+	}
+
+}
+
+
+/* Already a Member */
+
+
+.already-a-member {
+
+	@media screen and (min-width: 600px) {
+
+		margin: 0 0 40px 0;
+
+	}
+
+	.k-block {}
+
+		.title {}
+
+		p {}
+
+		form {
+
+			@media screen and (min-width: 600px) {
+
+				@include group;
+
+			}
+
+		}
+
+			fieldset {
+
+				@media screen and (min-width: 600px) {
+
+					float: left;
+					width: 50%;
+					padding: 0 20px 0 0;
+
+					&:last-of-type {
+
+						padding: 0 0 0 20px;
+
+					}
+
+				}
+
+			}
+
+				ol {}
+
+					li {
+
+						fieldset {
+
+							float: none;
+							width: auto;
+							padding: 0;
+
+							&:last-of-type {
+
+								padding: 0;
+
+							}
+
+						}
+
+					}
+
+						label {}
+
+						input {}
+
+						figure {
+
+							max-width: 400px;
+							margin: 20px 0 0 0;
+
+							img {
+
+								margin: 0 auto;
+
+							}
+
+						}
+
+							figcaption {
+
+								// Temporarily hidden.
+
+								display: none;
+
+							}
+
+						.d-m-y {
+
+							max-width: 400px;
+							margin: 0 0 20px 0;
+							text-align: justify;
+							@include placeholder;
+
+							.k-dropdown {
+
+								display: inline-block;
+								width: 30%;
+								max-width: none;
+								vertical-align: top;
+								margin: 0;
+
+							}
+
+						}
+
+			.k-button {
+
+				margin: 0;
+
+				@media screen and (min-width: 600px) {
+
+					margin-left: 20px;
+
+				}
+
+			}
+
+}
+
+
+/* New Account Information */
+
+// [/new-account/index.php]
+
+
+.new-account-information {
+
+	form {}
+
+		.group {
+
+			&:last-of-type {
+
+				margin: 20px 0 0 0;
+
+				@media screen and (min-width: 600px) {
+
+					margin: 40px 0 0 0;
+
+				}
+
+				.subgroup {
+
+					@media screen and (min-width: 600px) {
+
+						float: right;
+						padding: 0 0 0 20px;
+
+					}
+
+					&:last-of-type {
+
+						padding: 0 20px 0 0;
+
+					}
+
+				}
+
+			}
+
+		}
+
+			.subgroup {
+
+				@media screen and (min-width: 600px) {
+
+					float: left;
+					width: 50%;
+					padding: 0 20px 0 0;
+
+				}
+
+				&:last-of-type {
+
+					@media screen and (min-width: 600px) {
+
+						padding: 0 0 0 20px;
+
+					}
+
+				}
+
+			}
+
+				ol {}
+
+					li {}
+
+						label {}
+
+						input {}
+
+						fieldset {}
+
+							.d-m-y {
+
+								max-width: 400px;
+								margin: 0 0 -20px 0;
+								text-align: justify;
+								@include placeholder;
+
+								.k-dropdown {
+
+									display: inline-block;
+									width: 30%;
+									max-width: none;
+									vertical-align: top;
+									margin: 0;
+
+								}
+
+							}
+
+				.k-button {}
+
+}
+
+
+/* Day / Month / Year Group */
+
+
+.d-m-y {
+
+	max-width: 400px;
+	margin-bottom: -20px;
+	text-align: justify;
+	@include placeholder;
+
+	.k-dropdown {
+
+		display: inline-block;
+		width: 30%;
+		max-width: none;
+		vertical-align: top;
+		// margin: 0 0 20px 0;
+
+	}
+
+	.day {}
+
+	.month {}
+
+	.year {}
+
+}
+
+
+/* Month / Year Group */
+
+
+.m-y {
+
+	max-width: 400px;
+	margin: 0 0 -20px 0;
+	text-align: justify;
+	@include placeholder;
+
+	.k-dropdown {
+
+		display: inline-block;
+		width: 47%;
+		max-width: none;
+		margin: 0;
+		vertical-align: top;
+
+	}
+
+	.day {}
+
+	.month {}
+
+	.year {}
+
+}
+
+
+/* State / Zipcode Group */
+
+
+.state-zip {
+
+	max-width: 400px;
+	// margin: 0 0 -20px 0;
+	text-align: justify;
+	@include placeholder;
+
+	.states {
+
+		display: inline-block;
+		width: 47%;
+		max-width: none;
+		margin: 0;
+		vertical-align: top;
+
+		.k-dropdown {
+
+			text-align: left;
+
+		}
+
+	}
+
+	.zipcode {
+
+		display: inline-block;
+		width: 47%;
+		max-width: none;
+		margin: 0;
+
+		input {
+
+			text-align: left;
+
+		}
+
+	}
+
+}
+
+
+// Or Separator
+
+.or {
+
+	margin: 0 0 15px 0;
+
+	span {
+
+		display: block;
+		@include font-size(20);
+		line-height: (34/20) + em;
+		text-transform: uppercase;
+		color: $black;
+
+		&:before {
+
+			content: "-";
+
+		}
+
+		&:after {
+
+			content: "-";
+
+		}
+
+	}
+
+}
+
+
+/* Suggested Salons */
+
+
+.suggested-salons {
+
+	margin: 0 0 40px 0;
+
+}
+
+
+/* Individual Location */
+
+
+.individual-location {
+
+	@media screen and (min-width: 800px) {
+
+		@include group;
+
+	}
+
+	#dashboard.index & {
+
+		margin: 0 0 30px 0;
+
+		@media screen and (min-width: 660px) {
+
+			float: left;
+			width: 50%;
+			padding: 0 20px 0 0;
+
+		}
+
+	}
+
+	#dashboard.nearby-salons & {
+
+		@media screen and (min-width: 600px) {
+
+			@include group;
+
+		}
+
+	}
+
+	/* A group of suggested locations */
+
+	.suggested-salons & {
+
+		margin: 0 0 20px 0;
+		padding: 20px;
+		border: 1px solid rgb(109, 110, 112);
+		@include border-radius(3px);
+
+	}
+
+	// Salon Name
+
+	.n {
+
+		@include font-size(20);
+		line-height: (24/20) + em;
+		text-transform: uppercase;
+		color: $orange;
+
+	}
+
+	.overview {
+
+		.suggested-salons & {
+
+			#new-account.step-two.continued &,
+			#tanning.new-location & {
+
+				@media screen and (min-width: 600px) {
+
+					width: 50%;
+					padding-right: 20px;
+
+				}
+
+				@media screen and (min-width: 700px) {
+
+					width: 65%;
+
+				}
+
+				@media screen and (min-width: 800px) {
+
+					width: 50%;
+
+				}
+
+			}
+
+		}
+
+		#tanning.favorite-location & {
+
+			@media screen and (min-width: 600px) {
+
+				width: 50%;
+				padding-right: 20px;
+
+			}
+
+			@media screen and (min-width: 700px) {
+
+				width: 65%;
+
+			}
+
+			@media screen and (min-width: 800px) {
+
+				width: 50%;
+
+			}
+
+		}
+
+	}
+
+	.panelbar {
+
+		margin: 0;
+		padding: 0;
+		border: none;
+		outline: none;
+
+		.suggested-salons & {
+
+			#new-account.step-two.continued &,
+			#tanning.new-location & {
+
+				@media screen and (min-width: 800px) {
+
+					float: left;
+					width: 80%;
+
+				}
+
+			}
+
+			#dashboard.nearby-salons & {
+
+				@media screen and (min-width: 600px) {
+
+					float: left;
+					width: 50%;
+					padding: 0 20px 0 0;
+
+				}
+
+			}
+
+		}
+
+	}
+
+		.inner-wrap {
+
+			&.k-state-active {
+
+				span.k-link {}
+
+					.k-icon {
+
+						background-position: -30px -30px;
+
+					}
+
+			}
+
+		}
+
+			span.k-link {
+
+				position: relative;
+				display: block;
+				margin: 0 0 20px 0;
+				padding: 7px 40px 6px 10px;
+				@include font-size(16);
+				line-height: (20/16) + em;
+				text-transform: uppercase;
+				color: $white;
+				background: $green;
+				@include border-radius(2px);
+				cursor: pointer;
+
+				#dashboard.index & {
+
+					@media screen and (min-width: 550px) {
+
+						display: none;
+
+					}
+
+				}
+
+				.suggested-salons & {
+
+					#new-account.step-two.continued &,
+					#dashboard.nearby-salons &,
+					#tanning.new-location & {
+
+						@media screen and (min-width: 600px) {
+
+							display: none;
+
+						}
+
+					}
+
+				}
+
+				#tanning.favorite-location & {
+
+					@media screen and (min-width: 600px) {
+
+						display: none;
+
+					}
+
+				}
+
+				.k-icon {
+
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -15px;
+					width: 30px;
+					height: 30px;
+					background: url(/a/img/toggle.svg) 0 -30px;
+
+					.no-svg & {
+
+						background-image: url(/a/img/toggle.png);
+
+					}
+
+				}
+
+			}
+
+			.k-content {
+
+				#dashboard.index & {
+
+					@media screen and (min-width: 550px) {
+
+						display: block !important;
+
+					}
+
+				}
+
+				.suggested-salons & {
+
+					#new-account.step-two.continued &,
+					#dashboard.nearby-salons &,
+					#tanning.new-location & {
+
+						@media screen and (min-width: 600px) {
+
+							display: block !important;
+							@include group;
+
+						}
+
+					}
+
+				}
+
+				#tanning.favorite-location & {
+
+					@media screen and (min-width: 600px) {
+
+						display: block !important;
+						@include group;
+
+					}
+
+				}
+
+				.group {
+
+					.suggested-salons & {
+
+						#new-account.step-two.continued &,
+						#tanning.new-location & {
+
+							@media screen and (min-width: 550px) {
+
+								float: left;
+								padding: 0 20px 0 0;
+								width: 50%;
+
+							}
+
+							@media screen and (min-width: 700px) {
+
+								width: 65%;
+								@include group;
+
+							}
+
+						}
+
+					}
+
+					#tanning.favorite-location & {
+
+						@media screen and (min-width: 550px) {
+
+							float: left;
+							padding: 0 20px 0 0;
+							width: 50%;
+
+						}
+
+						@media screen and (min-width: 700px) {
+
+							width: 65%;
+							@include group;
+
+						}
+
+					}
+
+					#dashboard.index & {
+
+						@media screen and (min-width: 500px) and (max-width: 659px) {
+
+							@include group;
+
+						}
+
+					}
+
+				}
+
+			}
+
+					.tel-adr {
+
+						.suggested-salons & {
+
+							#new-account.step-two.continued &,
+							#tanning.new-location & {
+
+								@media screen and (min-width: 700px) {
+
+									float: left;
+									width: 50%;
+									padding: 0 20px 0 0;
+
+								}
+
+							}
+
+						}
+
+						#tanning.favorite-location & {
+
+							@media screen and (min-width: 600px) {
+
+								float: left;
+								width: 50%;
+								padding: 0 20px 0 0;
+
+							}
+
+						}
+
+						#dashboard.index & {
+
+							@media screen and (min-width: 500px) and (max-width: 659px) {
+
+								float: left;
+								width: 50%;
+								padding: 0 20px 0 0;
+
+							}
+
+						}
+
+					}
+
+						.tel {
+
+							margin: 0 0 10px 0;
+
+							b {
+
+								text-transform: uppercase;
+
+							}
+
+						}
+
+						.adr {
+
+							margin: 0 0 10px 0;
+
+						}
+
+							.street-address {}
+
+							.locality {}
+
+							.region {}
+
+							.postal-code {}
+
+					.hours {
+
+						margin: 0 0 20px 0;
+
+						.suggested-salons & {
+
+							#new-account.step-two.continued &,
+							#tanning.new-location & {
+
+								@media screen and (min-width: 700px) {
+
+									float: left;
+									width: 50%;
+									margin: 0;
+
+								}
+
+							}
+
+						}
+
+						#tanning.favorite-location & {
+
+							@media screen and (min-width: 700px) {
+
+								float: left;
+								width: 50%;
+								margin: 0;
+
+							}
+
+						}
+
+						#dashboard.index & {
+
+							@media screen and (min-width: 500px) and (max-width: 659px) {
+
+								float: left;
+								width: 50%;
+
+							}
+
+						}
+
+					}
+
+						.title {
+
+							@include font-size(16);
+							line-height: (21/16) + em;
+							text-transform: uppercase;
+							color: rgb(109, 110, 113);
+							@include proxima-nova-bold;
+
+						}
+
+						ul {}
+
+							li {
+
+								margin: 0;
+
+								span {
+
+									text-transform: uppercase;
+
+								}
+
+							}
+
+			.map {
+
+				margin: 0 0 20px 0;
+
+				.suggested-salons & {
+
+					#new-account.step-two.continued &,
+					#tanning.new-location & {
+
+						@media screen and (min-width: 550px) {
+
+							float: left;
+							width: 50%;
+							max-width: none;
+							@include group;
+
+						}
+
+						@media screen and (min-width: 700px) {
+
+							width: 35%;
+							margin: -50px 0 0 0;
+
+						}
+
+						@media screen and (min-width: 800px) {
+
+							margin: -60px 0 0 0;
+
+						}
+
+					}
+
+				}
+
+				#tanning.favorite-location & {
+
+					@media screen and (min-width: 550px) {
+
+						float: left;
+						width: 50%;
+						max-width: none;
+						@include group;
+
+					}
+
+					@media screen and (min-width: 700px) {
+
+						width: 35%;
+						margin: -50px 0 0 0;
+
+					}
+
+					@media screen and (min-width: 800px) {
+
+						margin: -60px 0 0 0;
+
+					}
+
+				}
+
+			}
+
+				iframe {
+
+					width: 100%;
+					height: 130px;
+					background: rgb(109, 110, 112);
+					border: 3px solid rgb(188, 190, 192);
+
+					.suggested-salons & {
+
+						#new-account.step-two.continued &,
+						#tanning.new-location & {
+
+							@media screen and (min-width: 550px) {
+
+								float: right;
+								max-width: 210px;
+
+							}
+
+						}
+
+					}
+
+					#tanning.favorite-location & {
+
+						margin: 0 0 20px 0;
+
+					}
+
+				}
+
+			.select {
+
+				.suggested-salons & {
+
+					#new-account.step-two.continued &,
+					#tanning.new-location & {
+
+						@media screen and (min-width: 550px) {
+
+							clear: both;
+							display: block;
+
+						}
+
+						@media screen and (min-width: 700px) {
+
+							margin: 20px 0 0 0;
+
+						}
+
+						@media screen and (min-width: 800px) {
+
+							clear: none;
+							float: left;
+							width: 20%;
+							margin: -60px 0 0 0;
+							@include group;
+
+						}
+
+					}
+
+				}
+
+				.k-button {
+
+					.suggested-salons & {
+
+						#new-account.step-two.continued &,
+						#tanning.new-location & {
+
+							@media screen and (min-width: 800px) {
+
+								position: relative;
+								top: 45px;
+								float: right;
+
+							}
+
+						}
+
+					}
+
+					#new-account.step-two &,
+					#dashboard.nearby-salons &,
+					#tanning.new-location & {
+
+						margin: 0;
+
+					}
+
+				}
+
+			}
+
+}
+
+
+/* Skin Type Questions */
+
+
+.skin-type-questions {
+
+	form {}
+
+		fieldset {}
+
+			legend {}
+
+			ol {}
+
+				li {}
+
+					label {}
+
+					.k-dropdown {
+
+						max-width: 100%;
+
+					}
+
+			.k-button {
+
+				margin: 20px 0 0 0;
+
+			}
+
+}
+
+
+/* Map */
+
+
+.map {
+
+	max-width: 250px;
+
+}
+
+
+/* Salon Search */
+
+
+.salon-search {
+
+	form {
+
+		@media screen and (min-width: 800px) {
+
+			@include group;
+
+		}
+
+	}
+
+		p {}
+
+		fieldset {}
+
+		.city-state {
+
+			@media screen and (min-width: 800px) {
+
+				float: left;
+				width: 70%;
+				max-width: 536px;
+				margin: 0 0 20px 0;
+
+			}
+
+		}
+
+		.zipcode {
+
+			margin: 0 0 20px 0;
+
+			@media screen and (min-width: 800px) {
+
+				float: left;
+				width: 20%;
+				margin: 0;
+
+			}
+
+			div {}
+
+		}
+
+			ol {
+
+				@media screen and (min-width: 600px) {
+
+					@include group;
+
+				}
+
+			}
+
+				li {}
+
+				.city {
+
+					@media screen and (min-width: 600px) {
+
+						float: left;
+						width: 70%;
+						max-width: 420px;
+						padding-right: 20px;
+
+					}
+
+				}
+
+				.state {
+
+					@media screen and (min-width: 600px) {
+
+						float: left;
+						width: 30%;
+						max-width: 160px;
+
+					}
+
+					.k-dropdown {
+
+						max-width: 160px;
+
+					}
+
+				}
+
+				.zip {
+
+					input {
+
+						max-width: 160px;
+
+					}
+
+				}
+
+					label {}
+
+					input {}
+
+		// Separator
+
+		.or {
+
+			margin: 20px 0;
+
+			@media screen and (min-width: 800px) {
+
+				float: left;
+				width: 10%;
+				text-align: center;
+
+			}
+
+			span {
+
+				@media screen and (min-width: 800px) {
+
+					position: relative;
+					top: 8px;
+
+				}
+
+			}
+
+		}
+
+		.k-button {
+
+			margin-top: 30px;
+
+			@media screen and (min-width: 800px) {
+
+				margin: 60px 0 0 0;
+				clear: both;
+				display: block;
+
+			}
+
+			#dashboard.nearby-salons &,
+			#tanning.new-location & {
+
+				margin: 30px 0 40px 0;
+
+			}
+
+		}
+
+}
+
+
+/* Skin Type Indicator */
+
+
+.skin-type-indicator {
+
+	margin: 0 0 40px 0;
+
+	@media screen and (min-width: 600px) {
+
+		margin: 0 0 20px 0;
+		@include group;
+
+	}
+
+	.type {
+
+		display: inline-block;
+		padding: 15px 40px 12px 40px;
+		@include font-size(20);
+		line-height: (24/20) + em;
+		text-transform: uppercase;
+		text-align: center;
+		color: $white;
+		background: $green;
+
+		@media screen and (min-width: 600px) {
+
+			float: left;
+			width: 25%;
+			max-width: 150px;
+
+		}
+
+	}
+
+	.description {
+
+		@media screen and (min-width: 600px) {
+
+			float: left;
+			width: 75%;
+			padding-left: 40px;
+
+		}
+
+		@media screen and (min-width: 800px) {
+
+			float: left;
+			width: 75%;
+			padding-left: 100px;
+
+		}
+
+	}
+
+}
+
+
+/* Terms and Conditions Block */
+
+
+.terms-and-conditions {
+
+	margin: 0 0 20px 0;
+	border: 1px solid rgb(109, 110, 113);
+
+	.content {
+
+		height: 100px;
+		padding: 15px;
+		@include font-size(14);
+		line-height: (22/14) + em;
+		overflow-x: hidden;
+		overflow-y: scroll;
+
+	}
+
+	label {
+
+		margin: 0;
+		padding: 15px;
+
+	}
+
+		input {}
+
+}
+
+
+/* Skin Type Table */
+
+
+.skin-type-table {
+
+	.panelbar {
+
+		margin: 0;
+		padding: 0;
+		border: none;
+		outline: none;
+
+	}
+
+		.inner-wrap {
+
+			&.k-state-active {
+
+				.k-link {}
+
+					.k-icon {
+
+						background-position: -30px -30px;
+
+					}
+
+			}
+
+		}
+
+			.k-link {
+
+				position: relative;
+				display: block;
+				margin: 0 0 20px 0;
+				padding: 7px 40px 6px 10px;
+				@include font-size(16);
+				line-height: (20/16) + em;
+				text-transform: uppercase;
+				color: $white;
+				background: $blue;
+				@include border-radius(2px);
+				cursor: pointer;
+
+				@media screen and (min-width: 600px) {
+
+					display: none;
+
+				}
+
+			}
+
+				.k-icon {
+
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -15px;
+					width: 30px;
+					height: 30px;
+					background: url(/a/img/toggle.svg) 0 -30px;
+
+					.no-svg & {
+
+						background-image: url(/a/img/toggle.png);
+
+					}
+
+				}
+
+			.k-content {
+
+				@media screen and (min-width: 600px) {
+
+					display: block !important;
+
+				}
+
+			}
+
+}
+
+/* Video */
+
+div.video {
+
+	width: 100%;
+	max-width: 600px;
+	margin: 0 0 20px 0;
+	background: rgb(109, 110, 112);
+
+	#education.index & {
+
+		margin: 40px auto 40px auto;
+
+	}
+
+	video {}
+
+		// Notes in case the video does not display.
+
+		p {}
+
+}
+
+/* Now You Can */
+
+#main {
+
+	.now-you-can {
+
+		margin: 0 0 20px 0;
+
+		ul {}
+
+			li {
+
+				position: relative;
+				min-height: 50px;
+				padding: 30px 0 30px 70px;
+				border-bottom: 1px solid rgb(109, 110, 113);
+
+				&:first-child {}
+
+				&:last-of-type {
+
+					border: none;
+
+				}
+
+				&:before {
+
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 0;
+					margin-top: -25px;
+					width: 50px;
+					height: 50px;
+					background: url(/a/img/icons.svg) no-repeat;
+					z-index: 5;
+
+					.no-svg & {
+
+						background-image: url(/a/img/icons.png);
+
+					}
+
+				}
+
+			}
+
+			// Mobile Check-In
+
+			.check-in {
+
+				&:before {}
+
+			}
+
+			// View Wait Times
+
+			.wait-times {
+
+				&:before {
+
+					background-position: -50px 0;
+
+				}
+
+			}
+
+			// Purchase Services
+
+			.purchase-services {
+
+				&:before {
+
+					left: -5px;
+					width: 60px;
+					margin-top: -30px;
+					background-position: -100px 0;
+
+				}
+
+			}
+
+	}
+
+}
+
+/* Share */
+
+.share {
+
+	margin: 40px 0 0 0;
+
+	.title {
+
+		@include font-size(16);
+		line-height: (20/16) + em;
+		color: rgb(109, 110, 113);
+
+	}
+
+	ul {
+
+		@include group;
+
+	}
+
+		li {
+
+			float: left;
+			margin: 0 15px 0 0;
+			@include hide-text;
+
+		}
+
+		.facebook {
+
+			a {
+
+				background-color: rgb(11, 148, 210);
+
+			}
+
+		}
+
+		.twitter {
+
+			a {
+
+				background-color: rgb(143, 195, 234);
+				background-position: -40px 0;
+
+			}
+
+		}
+
+			a {
+
+				display: block;
+				width: 40px;
+				height: 40px;
+				background: url(/a/img/share.svg);
+				@include border-radius(50%);
+
+				.no-svg & {
+
+					background-image: url(/a/img/share.png);
+
+				}
+
+				&:hover {}
+
+			}
+
+}
+
+
+/* Flex Group */
+
+
+.flex-group {
+
+	#dashboard.index & {}
+
+}
+
+
+/* Recent Activity */
+
+
+.recent-activity-block {
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 20px 0 0;
+
+	}
+
+	.k-block {
+
+		@media screen and (max-width: 599px) {
+
+			height: auto !important;
+
+		}
+
+	}
+
+		.location {
+
+			margin: 0 0 20px 0;
+
+		}
+
+			.name {
+
+				margin: 0 0 15px 0;
+
+			}
+
+			.date {}
+
+			.time {}
+
+			.bed {}
+
+			.tanning-time {}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+}
+
+
+/* Find a Salon */
+
+
+.find-a-salon {
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 0 0 20px;
+
+	}
+
+	.k-block {
+
+		@media screen and (max-width: 599px) {
+
+			height: auto !important;
+
+		}
+
+	}
+
+		.k-header {}
+
+		p {}
+
+		form {}
+
+			ol {}
+
+				li {
+
+					margin: 0;
+
+				}
+
+}
+
+
+/* Current Wait Times */
+
+
+.current-wait-times {
+
+	margin: 0 0 20px 0;
+
+	#dashboard.index & {
+
+		@media screen and (min-width: 660px) {
+
+			float: left;
+			width: 50%;
+			padding: 0 0 0 20px;
+
+		}
+
+	}
+
+	// Some pages need a little better spacing with elements above
+
+	#dashboard.nearby-salons & {
+
+		margin: 20px 0 0 0;
+
+		@media screen and (min-width: 600px) {
+
+			float: left;
+			width: 50%;
+			margin: 0;
+			padding: 0 0 0 20px;
+
+		}
+
+	}
+
+	.title {
+
+		margin: 0 0 10px 0;
+		@include font-size(16);
+		line-height: (20/16) + em;
+		color: $black;
+
+	}
+
+		.note {}
+
+	p {
+
+		@include font-size(14);
+		line-height: (16/14) + em;
+		text-transform: uppercase;
+		color: rgb(109, 110, 113);
+
+	}
+
+	ol {}
+
+		li {
+
+			margin: 0 0 20px 0;
+
+			// Sometimes this block is the last of all content, so, a margin is not necessary
+
+			&:last-of-type {
+
+				#dashboard.nearby-salons & {
+
+					margin: 0;
+
+				}
+
+			}
+
+		}
+
+			select {}
+
+				option {}
+
+	// Option to Double Dip
+
+	label {
+
+		input {}
+
+		a {
+
+			&:hover {}
+
+		}
+
+	}
+
+	.k-button {}
+
+}
+
+
+/* Check-in Options */
+
+
+.check-in-options {
+
+	margin: 0 0 20px 0;
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 20px 0 0;
+
+	}
+
+	.title {
+
+		@include font-size(16);
+		line-height: (20/16) + em;
+		text-transform: none;
+		color: $orange;
+
+	}
+
+	ul {}
+
+		li {
+
+			margin: 0 0 20px 0;
+
+			&:last-of-type {}
+
+		}
+
+			select {}
+
+				option {}
+
+	// Option to Double Dip
+
+	label {
+
+		input {}
+
+		a {
+
+			&:hover {}
+
+		}
+
+	}
+
+	.k-button {}
+
+}
+
+
+/* Check-in Options Definitions */
+
+
+.check-in-options-definitions {
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 0 0 20px;
+
+	}
+
+	.k-block {
+
+		background: rgb(246, 246, 246);
+
+	}
+
+		.k-header {
+
+			@include font-size(16);
+			line-height: (20/16) + em;
+			color: $black;
+
+		}
+
+		ul {}
+
+			li {
+
+				margin: 0 0 20px 0;
+
+			}
+
+				b {
+
+					text-transform: uppercase;
+					color: $pink;
+					@include proxima-nova-regular;
+
+				}
+
+		.note {
+
+			margin: 0;
+
+		}
+
+}
+
+
+/* Signature */
+
+
+.signature {
+
+	.xoxo {}
+
+}
+
+
+/* More Info */
+
+
+.more-info {
+
+	position: relative;
+	left: 5px;
+	top: 2px;
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	color: $white;
+	background: url(/a/img/info.svg);
+	@include hide-text;
+
+	.no-svg & {
+
+		background-image: url(/a/img/info.png);
+
+	}
+
+}
+
+
+/* Notifications */
+
+
+.notifications-list {
+
+	ol {}
+
+		li {
+
+			padding: 30px 0;
+			border-bottom: 1px solid rgb(167, 169, 172);
+
+			@media screen and (min-width: 600px) {
+
+				@include group;
+
+			}
+
+			&:first-child {}
+
+			&:last-of-type {
+
+				border: none;
+
+			}
+
+		}
+
+			time {
+
+				display: block;
+				margin: 0 0 10px 0;
+
+				@media screen and (min-width: 600px) {
+
+					float: left;
+					width: 20%;
+
+				}
+
+			}
+
+			.details {
+
+				@media screen and (min-width: 600px) {
+
+					float: left;
+					width: 80%;
+
+				}
+
+			}
+
+				.title {
+
+					margin: 0;
+					@include font-size(16);
+					line-height: (20/16) + em;
+					text-transform: none;
+					color: $orange;
+
+				}
+
+					.type {
+
+						text-transform: uppercase;
+
+					}
+
+				p {
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
+
+}
+
+
+
+/* Bed Type Options */
+
+
+.bed-type-options {
+
+	margin: 40px 0 0 0;
+
+	form {}
+
+		.group {}
+
+			ol {
+
+				@media screen and (min-width: 600px) {
+
+					float: left;
+					width: 50%;
+					padding: 0 20px 0 0;
+
+				}
+
+			}
+
+			.k-button {
+
+				margin: 20px 0 0 0;
+
+			}
+
+}
+
+
+/* Upgrade Dollars Purchased */
+
+
+.upgrade-dollars-purchased {
+
+	margin: 20px 0 0 0;
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		margin: 0;
+		padding: 0 0 0 20px;
+
+	}
+
+	.k-block {
+
+		background: rgb(246, 246, 246);
+
+	}
+
+		p {}
+
+		.upgrade-types {}
+
+			.upgrade-type {
+
+				padding: 20px 0;
+				border-bottom: 1px solid rgb(167, 169, 172);
+
+				&:first-child {
+
+					padding-top: 0;
+
+				}
+
+				&:last-of-type {
+
+					padding-bottom: 0;
+					border: none;
+
+				}
+
+			}
+
+				.title {
+
+					margin: 0 0 5px 0;
+					text-transform: uppercase;
+					color: $orange;
+
+				}
+
+					.more-info {}
+
+				.money-available {}
+
+}
+
+
+/* Upgrade Radio Options */
+
+
+.upgrade-radio-options {
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 20px 0 0;
+
+	}
+
+	ul {}
+
+		li {}
+
+			fieldset {
+
+				margin: 0 0 40px 0;
+
+			}
+
+				legend {
+
+					margin: 0 0 20px 0;
+					text-transform: uppercase;
+					color: $black;
+
+					span {
+
+						display: block;
+						text-transform: none;
+						color: rgb(109, 110, 113);
+
+					}
+
+				}
+
+				label {}
+
+					.input {}
+
+}
+
+
+/* Dollar Deals */
+
+
+.dollar-deals {
+
+	margin: 0 0 20px 0;
+
+	.dollar-deal {
+
+		@media screen and (min-width: 600px) {
+
+			float: left;
+			width: 50%;
+			margin: 20px 0 0 0;
+			padding: 0 20px 0 0;
+
+		}
+
+		&:last-of-type {
+
+			@media screen and (min-width: 600px) {
+
+				padding: 0 0 0 20px;
+
+			}
+
+		}
+
+	}
+
+		.k-block {
+
+			@media screen and (min-width: 600px) {
+
+				margin: 0;
+
+			}
+
+		}
+
+			.title {
+
+				margin: 0 0 15px 0;
+				text-transform: uppercase;
+				color: $orange;
+
+			}
+
+			fieldset {}
+
+				label {
+
+					position: relative;
+					padding: 0 0 0 25px;
+
+					em {
+
+						@include proxima-nova-regular;
+						color: $pink;
+
+					}
+
+				}
+
+					input {
+
+						position: absolute;
+						left: 0;
+						top: 1px;
+						z-index: 5;
+
+					}
+
+}
+
+
+/* Dollar Deal Checkboxes */
+
+
+.dollar-deal-checkboxes {
+
+	margin: 30px 0 30px 0;
+
+	ol {}
+
+		li {
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+		}
+
+			label {
+
+				position: relative;
+				margin: 0;
+				padding: 0 0 0 25px;
+
+			}
+
+				input {
+
+					position: absolute;
+					left: 0;
+					top: 3px;
+					z-index: 5;
+
+				}
+
+}
+
+
+/* Selection Overview */
+
+
+.selection-overview-details {
+
+	margin: 40px 0;
+	border-bottom: 1px solid rgb(188, 190, 192);
+
+	.title {
+
+		@include font-size(16);
+		line-height: (20/16) + em;
+
+	}
+
+	ul {
+
+		@media screen and (min-width: 600px) {
+
+			@include group;
+
+		}
+
+	}
+
+		li {
+
+			@media screen and (min-width: 600px) {
+
+				float: left;
+				width: 25%;
+				padding: 0 20px 0 0;
+
+			}
+
+			&:last-of-type {
+
+				@media screen and (min-width: 600px) {
+
+					padding: 0;
+
+				}
+
+			}
+
+			b {}
+
+		}
+
+}
+
+
+/* Selection Overview Totals */
+
+
+.selection-overview-totals {
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 40px 0 0;
+
+	}
+
+}
+
+
+/* Selection Overview Notes */
+
+
+.selection-overview-notes {
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 0 0 40px;
+
+	}
+
+}
+
+
+/* Selected Check-in */
+
+
+.selected-check-in {
+
+	margin: 0 0 20px 0;
+	@include proxima-nova-bold;
+
+}
+
+
+/* Selected Service */
+
+
+.selected-service {
+
+	margin: 0 0 40px 0;
+
+	.title {
+
+		margin: 0 0 15px 0;
+		@include proxima-nova-bold;
+
+	}
+
+		div {}
+
+			.line-items {
+
+				li {
+
+					margin: 0 0 10px 0;
+					@include group;
+
+				}
+
+					span {
+
+						float: right;
+
+					}
+
+			}
+
+			.line-items-total {
+
+				padding: 10px 0 0 0;
+				border-top: 1px solid rgb(209, 211, 212);
+				@include proxima-nova-bold;
+				@include group;
+
+				span {
+
+					float: right;
+
+				}
+
+			}
+
+}
+
+
+/* Purchased Upgrade Dollars */
+
+
+.purchased-upgrade-dollars {
+
+	margin: 0 0 40px 0;
+
+	.title {
+
+		margin: 0 0 15px 0;
+		@include proxima-nova-bold;
+
+		span {
+
+			display: block;
+
+		}
+
+	}
+
+		div {}
+
+			.line-items {
+
+				li {
+
+					margin: 0 0 10px 0;
+					@include group;
+
+				}
+
+					span {
+
+						float: right;
+
+					}
+
+			}
+
+			.line-items-total {
+
+				padding: 10px 0 0 0;
+				border-top: 1px solid rgb(209, 211, 212);
+				@include proxima-nova-bold;
+				@include group;
+
+				span {
+
+					float: right;
+
+				}
+
+			}
+
+}
+
+
+/* Due Today */
+
+
+.due-today {
+
+	margin: 0 0 40px 0;
+	padding: 15px;
+	border: 1px solid $orange;
+	@include border-radius(2px);
+	@include proxima-nova-bold;
+	text-transform: uppercase;
+	color: $orange;
+	@include group;
+
+	span {
+
+		float: right;
+
+	}
+
+}
+
+/* Email Opt-Out */
+
+
+.email-opt-out {
+
+	margin: 0 0 20px 0;
+
+	label {}
+
+		input {}
+
+}
+
+
+/* Upgrade Dollars Remaining */
+
+
+.upgrade-dollars-remaining {
+
+	margin: 30px 0 20px 0;
+
+	.upgrade-types {}
+
+		.upgrade-type {}
+
+			.title {
+
+				margin: 0 0 15px 0;
+				text-transform: uppercase;
+				color: $black;
+
+			}
+
+			.money-available {}
+
+			.money-used {
+
+				color: $orange;
+
+			}
+
+			.money-remaining {
+
+				margin: 5px 0 0 0;
+				padding: 5px 0 0 0;
+				border-top: 1px solid rgb(167, 169, 172);
+
+			}
+
+}
+
+
+/* Quick Pay Opt-In */
+
+
+.quick-pay-opt-in {
+
+	margin: 0 0 20px 0;
+	padding: 30px;
+	background: $orange;
+
+	label {
+
+		margin: 0;
+		color: $white;
+
+	}
+
+		input {}
+
+}
+
+
+/* Confirmation Number */
+
+
+.confirmation-number {
+
+	margin: 40px 0 20px 0;
+	@include proxima-nova-bold;
+	text-transform: uppercase;
+	color: rgb(109, 110, 113);
+
+	.title {}
+
+	.details {
+
+		margin: 0 0 20px 0;
+		@include proxima-nova-regular;
+
+	}
+
+}
+
+
+/* Tips */
+
+
+.tips-wrap {
+
+	margin: 20px 0 40px 0;
+	max-width: 400px;
+
+}
+
+
+.tips {
+
+	margin: 0 0 20px 0;
+
+	&:last-of-type {
+
+		margin: 0;
+
+	}
+
+	.title {
+
+		@include proxima-nova-bold;
+		text-transform: uppercase;
+		color: $orange;
+
+	}
+
+	ol {
+
+		list-style-type: decimal;
+		list-style-position: outside;
+		padding: 0 0 0 22px;
+
+	}
+
+		li {}
+
+}
+
+
+/* Widgets */
+
+
+.three-block-group {
+
+	@media screen and (min-width: 680px) and (max-width: 839px), screen and (min-width: 960px) {
+
+		text-align: justify;
+		@include placeholder;
+
+		// display: -webkit-box;
+		// display: -moz-box;
+		// display: -ms-flexbox;
+		// display: -webkit-flex;
+		// display: flex;
+
+		// -webkit-flex-flow: row wrap;
+		// -moz-flex-flow: row wrap;
+		// flex-flow: row wrap;
+
+		// -webkit-justify-content: space-between;
+		// -moz-flex-flow: space-between;
+		// justify-content: space-around;
+
+	}
+
+}
+
+
+.beds-and-booths-block {
+
+	.k-block {
+
+		#education.index & {
+
+			@media screen and (max-width: 599px) {
+
+				height: auto !important;
+
+			}
+
+			@media screen and (min-width: 600px) {
+
+				margin: 0;
+
+			}
+
+		}
+
+	}
+
+		.k-header {}
+
+		p {}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+		#education.index & {
+
+			@media screen and (min-width: 600px) {
+
+				float: left;
+				width: 50%;
+				padding-right: 20px;
+
+			}
+
+		}
+
+}
+
+
+.faq-block {
+
+	.k-block {
+
+		margin: 0;
+
+		@media screen and (max-width: 599px) {
+
+			height: auto !important;
+
+		}
+
+	}
+
+		.k-header {}
+
+		p {}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+		#education.index & {
+
+			@media screen and (min-width: 600px) {
+
+				float: left;
+				width: 50%;
+				padding-left: 20px;
+
+			}
+
+		}
+
+}
+
+
+.view-favorite-location-block {
+
+	@media screen and (max-width: 679px), screen and (min-width: 840px) and (max-width: 959px) {
+
+		height: auto !important;
+
+	}
+
+	@media screen and (min-width: 680px) and (max-width: 839px), screen and (min-width: 960px) {
+
+		display: inline-block;
+		width: 31.5%;
+		vertical-align: top;
+		text-align: left;
+
+	}
+
+	.k-block {
+
+		background: green !important;
+
+	}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+}
+
+.view-skin-type-block {
+
+	@media screen and (max-width: 679px), screen and (min-width: 840px) and (max-width: 959px) {
+
+		height: auto !important;
+
+	}
+
+	@media screen and (min-width: 680px) and (max-width: 839px), screen and (min-width: 960px) {
+
+		display: inline-block;
+		width: 31.5%;
+		vertical-align: top;
+		text-align: left;
+
+	}
+
+	.k-block {}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+}
+
+.view-activity-block {
+
+	@media screen and (max-width: 679px), screen and (min-width: 840px) and (max-width: 959px) {
+
+		height: auto !important;
+
+	}
+
+	@media screen and (min-width: 680px) and (max-width: 839px), screen and (min-width: 960px) {
+
+		display: inline-block;
+		width: 31.5%;
+		vertical-align: top;
+		text-align: left;
+
+	}
+
+	.k-block {}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+}
+
+
+
+/* Bed Type */
+
+// This is located in the Beds and Booths section (/education/beds-and-booths.php). A change may need to be made to keep from affecting something else.
+
+
+.bed-type {
+
+	@media screen and (min-width: 600px) {
+
+		@include group;
+
+	}
+
+	&:first-of-type {
+
+		margin-top: 30px;
+
+	}
+
+	&:last-of-type {
+
+		margin: 0;
+
+	}
+
+	.details {
+
+		@media screen and (min-width: 600px) {
+
+			float: left;
+			width: 60%;
+			padding-right: 20px;
+
+		}
+
+	}
+
+		.title {
+
+			margin: 0 0 15px 0;
+			@include font-size(20);
+			line-height: (24/20) + em;
+			color: $orange;
+
+		}
+
+		.features {
+
+			margin: 0 0 20px 0;
+			list-style-type: disc;
+			list-style-position: outside;
+			padding: 0 0 0 22px;
+
+			li {}
+
+		}
+
+	.video {
+
+		margin: 0;
+
+		@media screen and (min-width: 600px) {
+
+			float: left;
+			width: 40%;
+			background: green;
+
+		}
+
+	}
+
+}
+
+
+/* Questions */
+
+
+.questions {
+
+	margin: 20px 0 40px 0;
+
+	ol {
+
+		list-style-type: decimal;
+		list-style-position: outside;
+		padding: 0 0 0 22px;
+
+	}
+
+		li {}
+
+			a {
+
+				&:hover {}
+
+			}
+
+}
+
+
+/* Questions */
+
+
+.answers {
+
+	ol {}
+
+		li {
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+		}
+
+			.overview {
+
+				margin: 0 0 20px 0;
+
+			}
+
+			.detail {}
+
+				b {
+
+					@include proxima-nova-regular;
+					text-transform: uppercase;
+					color: $orange;
+
+				}
+
+}
+
+
+/* Account Information */
+
+
+.account-information {
+
+	margin: 0 0 20px 0;
+
+	form {
+
+		@media screen and (min-width: 700px) {
+
+			@include group;
+
+		}
+
+	}
+
+		.title {
+
+			padding: 0 0 10px 0;
+			border-bottom: 2px solid rgb(188, 190, 192);
+
+		}
+
+		fieldset {
+
+			margin: 0 0 20px 0;
+
+			@media screen and (min-width: 500px) {
+
+				@include group;
+
+			}
+
+			@media screen and (min-width: 700px) {
+
+				float: left;
+				width: 50%;
+				padding: 0 20px 0 0;
+
+			}
+
+			&:last-of-type {
+
+				@media screen and (min-width: 700px) {
+
+					padding: 0 0 0 20px;
+
+				}
+
+			}
+
+		}
+
+			.email {
+
+				b {
+
+					display: block;
+
+				}
+
+				margin: 0 0 20px 0;
+
+			}
+
+			.subgroup {
+
+				@media screen and (min-width: 500px) {
+
+					float: left;
+					width: 50%;
+
+				}
+
+			}
+
+			ol {}
+
+				li {
+
+					b {
+
+						display: block;
+
+					}
+
+					span {
+
+						display: block;
+
+					}
+
+				}
+
+			legend {
+
+				margin: 0 0 20px 0;
+
+			}
+
+			.radio-group {
+
+				margin: 0 0 20px 0;
+
+				label {
+
+					position: relative;
+					display: block;
+					padding: 0 0 0 25px;
+
+				}
+
+					input {
+
+						position: absolute;
+						left: 0;
+						top: 2px;
+						z-index: 5;
+
+					}
+
+			}
+
+			p {}
+
+				small {
+
+					@include font-size(12);
+					line-height: (14/12) + em;
+
+				}
+
+}
+
+
+/* Billing Information */
+
+
+.billing-information {
+
+	.title {
+
+		padding: 0 0 10px 0;
+		border-bottom: 2px solid rgb(188, 190, 192);
+
+	}
+
+}
+
+
+/* Monthly Billing Account */
+
+// Widget-like item at /profile/
+
+
+.monthly-billing-account {
+
+	@media screen and (min-width: 600px) and (max-width: 839px), screen and (min-width: 1170px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 10px 0 0;
+
+	}
+
+	.k-block {
+
+		@media screen and (max-width: 599px), screen and (min-width: 840px) and (max-width: 1169px) {
+
+			height: auto;
+
+		}
+
+	}
+
+		.title {
+
+			padding: 0;
+			@include font-size(20);
+			line-height: (24/20) + em;
+			color: $orange;
+			border: none;
+
+		}
+
+		.group {}
+
+			.card {
+
+				margin: 0 0 20px 0;
+
+				@media screen and (min-width: 500px) and (max-width: 599px), screen and (min-width: 840px) {
+
+					float: left;
+					width: 50%;
+					margin: 0;
+					padding: 0 10px 0 0;
+
+				}
+
+			}
+
+			.ach {
+
+				@media screen and (min-width: 500px) and (max-width: 599px), screen and (min-width: 840px) {
+
+					float: left;
+					width: 50%;
+					padding: 0 0 0 10px;
+
+				}
+
+			}
+
+				ul {
+
+					margin: 0 0 20px 0;
+
+				}
+
+					li {
+
+						margin: 0 0 20px 0;
+
+						&:last-of-type {
+
+							margin: 0;
+
+						}
+
+					}
+
+						b {
+
+							display: block;
+
+						}
+
+				.k-button {
+
+					margin: 0;
+
+				}
+
+}
+
+
+/* Preferred Quick Pay */
+
+// Widget-like item at /profile/
+
+.preferred-quick-pay {
+
+	@media screen and (min-width: 600px) and (max-width: 839px), screen and (min-width: 1170px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 0 0 10px;
+
+	}
+
+	.k-block {}
+
+		.title {
+
+			padding: 0;
+			@include font-size(20);
+			line-height: (24/20) + em;
+			color: $orange;
+			border: none;
+
+		}
+
+		.group {}
+
+			.card {
+
+				div {
+
+					div {
+
+						margin: 0 0 20px 0;
+
+					}
+
+				}
+
+			}
+
+				.k-button {
+
+					margin: 0;
+
+				}
+
+}
+
+
+/* Next Item... */
+
+
+/*-------------------------------------------
+	Custom Calls
+-------------------------------------------*/
+
+// Unique things occur throughout certain
+// sections or on specific pages.
+
+
+/* Welcome */
+
+
+#welcome {}
+
+
+/* New Account */
+
+
+#new-account {
+
+	/* Landing Page */
+
+	// Stuff...
+
+	// Step One
+
+	&.step-one {}
+
+	// Step Two
+
+	&.step-two {
+
+		// Continued...
+
+		&.continued {}
+
+	}
+
+	// Step Three
+
+	&.step-three {
+
+		form {}
+
+			fieldset {
+
+				margin: 0 0 40px 0;
+
+				&:last-of-type {
+
+					margin: 0;
+
+				}
+
+			}
+
+				legend {
+
+					margin: 0 0 20px 0;
+					text-transform: uppercase;
+
+				}
+
+				ol {}
+
+					li {}
+
+				button {}
+
+	}
+
+}
+
+
+/* My Monthly Membership */
+
+
+.my-monthly-membership {
+
+	@media screen and (min-width: 600px) {
+
+		display: table-cell;
+		width: 50%;
+		padding: 0 10px 0 0;
+		vertical-align: top;
+
+	}
+
+	.k-block {}
+
+		.title {
+
+			@include font-size(20);
+			line-height: (24/20) + em;
+			color: $orange;
+
+		}
+
+		div {
+
+			margin: 0 0 20px 0;
+
+		}
+
+			ul {}
+
+				li {
+
+					margin: 0 0 20px 0;
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
+
+					b {
+
+						display: block;
+
+					}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+}
+
+
+/* My Pre-Paid Memberships */
+
+
+.my-pre-paid-memberships {
+
+	@media screen and (min-width: 600px) {
+
+		display: table-cell;
+		width: 50%;
+		padding: 0 0 0 10px;
+		vertical-align: top;
+
+	}
+
+	.k-block {}
+
+		.title {
+
+			@include font-size(20);
+			line-height: (24/20) + em;
+			color: $orange;
+
+		}
+
+		div {
+
+			margin: 0 0 20px 0;
+
+			.panelbar {
+
+					.k-link {
+
+						position: relative;
+						display: block;
+						margin: 0 0 20px 0;
+						padding: 7px 40px 6px 10px;
+						@include font-size(16);
+						line-height: (20/16) + em;
+						text-transform: none;
+						@include border-radius(2px);
+						border: 1px solid rgb(109, 110, 113);
+						cursor: pointer;
+
+					}
+
+						.k-icon {
+
+							position: absolute;
+							right: 0;
+							top: 50%;
+							margin-top: -15px;
+							width: 30px;
+							height: 30px;
+							background: url(/a/img/toggle.svg) 0 0;
+
+							.no-svg & {
+
+								background-image: url(/a/img/toggle.png);
+
+							}
+
+						}
+
+			}
+
+				.k-header {
+
+					margin: 0;
+					padding: 0;
+					border: none;
+					outline: none;
+
+				}
+
+					.inner-wrap {
+
+						&.k-state-active {
+
+							.k-link {}
+
+								.k-icon {
+
+									background-position: -30px 0;
+
+								}
+
+						}
+
+					}
+
+		}
+
+			ol {}
+
+				li {}
+
+					.inner-wrap {}
+
+						.k-link {}
+
+						div {}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+}
+
+
+/* My Packages */
+
+
+.my-packages {
+
+	@media screen and (min-width: 600px) {
+
+		display: table-cell;
+		width: 50%;
+		padding: 0 10px 0 0;
+		vertical-align: top;
+
+	}
+
+	.k-block {}
+
+		.title {
+
+			@include font-size(20);
+			line-height: (24/20) + em;
+			color: $orange;
+
+		}
+
+		div {
+
+			margin: 0 0 20px 0;
+
+			.panelbar {
+
+					.k-link {
+
+						position: relative;
+						display: block;
+						margin: 0 0 20px 0;
+						padding: 7px 40px 6px 10px;
+						@include font-size(16);
+						line-height: (20/16) + em;
+						text-transform: none;
+						@include border-radius(2px);
+						border: 1px solid rgb(109, 110, 113);
+						cursor: pointer;
+
+					}
+
+						.k-icon {
+
+							position: absolute;
+							right: 0;
+							top: 50%;
+							margin-top: -15px;
+							width: 30px;
+							height: 30px;
+							background: url(/a/img/toggle.svg) 0 0;
+
+							.no-svg & {
+
+								background-image: url(/a/img/toggle.png);
+
+							}
+
+						}
+
+			}
+
+				.k-header {
+
+					margin: 0;
+					padding: 0;
+					border: none;
+					outline: none;
+
+				}
+
+					.inner-wrap {
+
+						&.k-state-active {
+
+							.k-link {}
+
+								.k-icon {
+
+									background-position: -30px 0;
+
+								}
+
+						}
+
+					}
+
+		}
+
+			ol {}
+
+				li {
+
+					margin: 0 0 20px 0;
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
+
+					.inner-wrap {}
+
+						div {}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+}
+
+
+/* My Upgrade Dollars */
+
+
+.my-upgrade-dollars {
+
+	@media screen and (min-width: 600px) {
+
+		display: table-cell;
+		width: 50%;
+		padding: 0 0 0 10px;
+		vertical-align: top;
+
+	}
+
+	.k-block {}
+
+		.title {
+
+			@include font-size(20);
+			line-height: (24/20) + em;
+			color: $orange;
+
+		}
+
+		div {
+
+			margin: 0 0 20px 0;
+
+		}
+
+			ul {}
+
+				li {
+
+					margin: 0 0 20px 0;
+
+					&:last-of-type {
+
+						margin: 0;
+
+					}
+
+				}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+}
+
+
+/* View Favorite Location */
+
+
+.view-favorite-location {
+
+	.k-block {}
+
+		p {}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+}
+
+
+/* View Skin Type */
+
+
+.view-skin-type {
+
+	p {}
+
+	.k-button {
+
+		margin: 0;
+
+	}
+
+}
+
+
+/* View Activity */
+
+
+.view-activity {
+
+	p {}
+
+	.k-button {
+
+		margin: 0;
+
+	}
+
+}
+
+
+/* Promo */
+
+
+.promo {
+
+	display: none;
+	margin: 0 0 0 60px;
+	padding: 20px 40px;
+	color: $white;
+	background: $teal;
+	@include border-radius(3px);
+
+	@media screen and (min-width: 600px) {
+
+		position: relative;
+		display: block;
+		margin-top: 80px;
+		padding-left: 285px;
+
+	}
+
+	p {
+
+		@include delius;
+
+		&:last-of-type {
+
+			margin: 0;
+
+		}
+
+	}
+
+	&:before {
+
+		@media screen and (min-width: 600px) {
+
+			position: absolute;
+			content: "";
+			width: 330px;
+			height: 160px;
+			left: -55px;
+			bottom: -17px;
+			background: url(/a/img/vicky-promo.png);
+			z-index: 5;
+
+			@include retina {
+
+				background-image: url(/a/img/vicky-promo@2x.png);
+				background-size: 330px 160px;
+
+			}
+
+		}
+
+	}
+
+}
+
+
+/* Current Monthly Membership */
+
+
+.current-monthly-membership {
+
+	margin: 0 0 20px 0;
+
+	@media screen and (min-width: 600px) {
+
+		@include group;
+
+	}
+
+	.back-to-button {
+
+		@media screen and (min-width: 1170px) {
+
+			float: left;
+			width: 25%;
+
+		}
+
+	}
+
+	.overview {
+
+		@media screen and (min-width: 600px) {
+
+			float: left;
+			width: 50%;
+			padding: 0 20px 0 0;
+
+		}
+
+		@media screen and (min-width: 1170px) {
+
+			padding: 0 20px;
+
+		}
+
+		.title {
+
+			@include font-size(20);
+			line-height: (24/20) + em;
+
+		}
+
+		ul {}
+
+			li {
+
+				margin: 0 0 20px 0;
+
+			}
+
+	}
+
+	.options {
+
+		@media screen and (min-width: 600px) {
+
+			float: right;
+			width: 50%;
+			@include group;
+
+		}
+
+		@media screen and (min-width: 1170px) {
+
+			float: left;
+			width: 25%;
+
+		}
+
+		ul {
+
+			@media screen and (min-width: 600px) {
+
+				float: right;
+
+			}
+
+		}
+
+			li {}
+
+				.k-button {
+
+					display: block;
+
+				}
+
+	}
+
+}
+
+
+/* Available Membership Options */
+
+
+.available-membership-options {
+
+	.title {
+
+		@include font-size(20);
+		line-height: (24/20) + em;
+
+	}
+
+	form {}
+
+		.available-membership-option {
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+			.title {
+
+				color: $orange;
+
+			}
+
+		}
+
+			.group {}
+
+				.overview {
+
+					@media screen and (min-width: 600px) {
+
+						float: left;
+						width: 50%;
+						padding: 0 20px 0 0;
+
+					}
+
+					@media screen and (min-width: 1000px) {
+
+						width: 33.33333%;
+
+					}
+
+					ul {}
+
+						li {
+
+							b {
+
+								display: block;
+
+							}
+
+							&:last-of-type {
+
+								@media screen and (min-width: 600px) {
+
+									margin: 0;
+
+								}
+
+							}
+
+						}
+
+				}
+
+					ul {}
+
+						li {
+
+							b {}
+
+						}
+
+				.video {
+
+					display: none;
+
+					@media screen and (min-width: 1000px) {
+
+						float: left;
+						width: 33.33333%;
+						display: block;
+
+					}
+
+					iframe {}
+
+				}
+
+				.options {
+
+					@media screen and (min-width: 600px) {
+
+						float: left;
+						width: 50%;
+						padding: 0 0 0 20px;
+
+					}
+
+					@media screen and (min-width: 1000px) {
+
+						width: 33.33333%;
+						padding: 0 0 0 40px;
+
+					}
+
+					ul {}
+
+						li {}
+
+							.k-button {
+
+								display: block;
+								margin: 0;
+
+							}
+
+				}
+
+}
+
+
+/* Special Offer Code */
+
+
+.special-offer-code {
+
+	label {
+
+		text-transform: uppercase;
+
+	}
+
+	.k-textbox {}
+
+		input {}
+
+			a {
+
+				&:hover {}
+
+			}
+
+}
+
+
+/* Available Packages Filter */
+
+
+.filter {
+
+	margin: 40px 0;
+
+	.title {}
+
+	select {}
+
+		option {}
+
+}
+
+
+/* Available Packages */
+
+
+.available-packages {
+
+	form {}
+
+		.filter {
+
+			@media screen and (min-width: 600px) {
+
+				margin-bottom: 0;
+				@include group;
+
+			}
+
+			.title {
+
+				@media screen and (min-width: 600px) {
+
+					float: left;
+
+				}
+
+			}
+
+			.filter-options {
+
+				@media screen and (min-width: 600px) {
+
+					float: right;
+					width: 40%;
+
+				}
+
+			}
+
+		}
+
+		.list-of-available-packages {}
+
+			.k-block {
+
+				.title {
+
+					@include font-size(20);
+					line-height: (24/20) + em;
+					color: $orange;
+
+				}
+
+				.group {}
+
+					.bed-type {
+
+						margin: 0 0 20px 0;
+
+						@media screen and (min-width: 565px) {
+
+							float: left;
+							width: 33.33333%;
+							padding: 0 20px 0 0;
+
+						}
+
+						@media screen and (min-width: 1000px) {
+
+							width: 25%;
+							padding: 0 20px 0 0;
+
+						}
+
+						.label {
+
+							margin: 0;
+							@include proxima-nova-bold;
+							text-transform: none;
+
+						}
+
+						.detail {}
+
+					}
+
+					.includes {
+
+						margin: 0 0 20px 0;
+
+						@media screen and (min-width: 565px) {
+
+							float: left;
+							width: 33.33333%;
+							padding: 0 20px 0 20px;
+
+						}
+
+						@media screen and (min-width: 1000px) {
+
+							width: 25%;
+							padding: 0 20px 0 0;
+
+						}
+
+						.label {
+
+							margin: 0;
+							@include proxima-nova-bold;
+							text-transform: none;
+
+						}
+
+						.detail {}
+
+							li {
+
+								margin: 0;
+
+							}
+
+					}
+
+					.purchase-price {
+
+						margin: 0 0 20px 0;
+
+						@media screen and (min-width: 565px) {
+
+							float: left;
+							width: 33.33333%;
+							padding: 0 0 0 20px;
+
+						}
+
+						@media screen and (min-width: 1000px) {
+
+							width: 25%;
+							padding: 0 20px 0 0;
+
+						}
+
+						.label {
+
+							margin: 0;
+							@include proxima-nova-bold;
+
+						}
+
+						.detail {}
+
+					}
+
+					.purchase {
+
+						@media screen and (min-width: 565px) {
+
+							clear: both;
+							float: right;
+							width: 33.33333%;
+							padding: 0 0 0 20px;
+
+						}
+
+						@media screen and (min-width: 1000px) {
+
+							clear: none;
+							float: left;
+							width: 25%;
+
+						}
+
+						.k-button {
+
+							margin: 0;
+
+						}
+
+					}
+
+			}
+
+}
+
+
+/* Purchase Overview Form */
+
+
+.purchase-overview-form {
+
+	form {}
+
+}
+
+
+/* Purchase Overview Details */
+
+
+.purchase-overview-details {
+
+	margin: 0 0 40px 0;
+
+	@media screen and (min-width: 600px) {
+
+		@include group;
+
+	}
+
+}
+
+
+/* Purchase Overview List */
+
+
+.purchase-overview-list {
+
+	margin: 0 0 40px 0;
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		margin: 0;
+		padding: 0 20px 0 0;
+
+	}
+
+	.coupon {
+
+		margin: 0 0 20px 0;
+
+	}
+
+	.duration {
+
+		margin: 0 0 20px 0;
+
+	}
+
+	.expiration {
+
+		margin: 0 0 20px 0;
+
+	}
+
+		.label {
+
+			@include proxima-nova-bold;
+
+		}
+
+		.detail {}
+
+}
+
+
+/* Payment Due Today */
+
+
+.payment-due-today {
+
+	margin: 0 0 40px 0;
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 0 0 20px;
+
+	}
+
+	table {
+
+		margin: 0 0 20px 0;
+		border: none;
+
+	}
+
+		thead {
+
+			background: none;
+
+		}
+
+		tbody {}
+
+			tr {}
+
+				th {
+
+					padding: 0 0 20px 0;
+					@include font-size(20);
+					line-height: (24/20) + em;
+					@include proxima-nova-regular;
+					color: $black;
+					background: none;
+
+				}
+
+				td {
+
+					padding-left: 0;
+					padding-right: 0;
+
+				}
+
+					.label {}
+
+					.amount {}
+
+			/* Total */
+
+			.total {
+
+				border-top: 1px solid rgb(209, 211, 212);
+
+				.label {
+
+					@include proxima-nova-bold;
+					color: $orange;
+
+				}
+
+				.amount {
+
+					@include proxima-nova-bold;
+					color: $orange;
+
+				}
+
+			}
+
+}
+
+
+/* Discount Promo Code */
+
+
+.discount-promo-code {
+
+	label {
+
+		text-transform: uppercase;
+
+	}
+
+	.k-textbox {}
+
+		input {}
+
+			a {
+
+				&:hover {}
+
+			}
+
+}
+
+
+/* Payment Method Details */
+
+
+.payment-method-details {
+
+	.group {
+
+		&:last-of-type {
+
+			margin: 20px 0 0 0;
+
+			.subgroup {
+
+				@media screen and (min-width: 600px) {
+
+					float: right;
+					padding: 0 0 0 20px;
+
+				}
+
+				&:last-of-type {
+
+					padding: 0 20px 0 0;
+
+				}
+
+			}
+
+		}
+
+	}
+
+		.subgroup {
+
+			@media screen and (min-width: 600px) {
+
+				float: left;
+				width: 50%;
+				padding: 0 20px 0 0;
+
+			}
+
+			&:last-of-type {
+
+				@media screen and (min-width: 600px) {
+
+					padding: 0 0 0 20px;
+
+				}
+
+			}
+
+		}
+
+	legend {
+
+		width: 100%;
+		margin: 0 0 20px 0;
+		padding: 0 0 5px 0;
+		@include font-size(24);
+		line-height: (28/24) + em;
+		text-transform: uppercase;
+		color: $black;
+		border-bottom: 1px solid rgb(209, 211, 212);
+
+	}
+
+	p {}
+
+	.quick-pay-opt-in {
+
+		@media screen and (min-width: 600px) {
+
+			margin: 40px 0;
+
+		}
+
+	}
+
+	.k-button {
+
+		@media screen and (min-width: 600px) {
+
+			margin: 0;
+
+		}
+
+	}
+
+}
+
+
+/* Payment Method Details */
+
+
+.payment-method-details {
+
+	.group {
+
+		&:last-of-type {
+
+			margin: 20px 0 0 0;
+
+			.subgroup {
+
+				@media screen and (min-width: 600px) {
+
+					float: right;
+					padding: 0 0 0 20px;
+
+				}
+
+				&:last-of-type {
+
+					padding: 0 20px 0 0;
+
+				}
+
+			}
+
+		}
+
+	}
+
+		.subgroup {
+
+			@media screen and (min-width: 600px) {
+
+				float: left;
+				width: 50%;
+				padding: 0 20px 0 0;
+
+			}
+
+			&:last-of-type {
+
+				@media screen and (min-width: 600px) {
+
+					padding: 0 0 0 20px;
+
+				}
+
+			}
+
+		}
+
+}
+
+
+/* Confirm and Sign */
+
+
+.confirm-and-sign {
+
+	legend {
+
+		margin: 0 0 20px 0;
+		@include font-size(20);
+		line-height: (24/20) + em;
+		text-transform: uppercase;
+		color: $black;
+
+	}
+
+	ol {}
+
+		li {}
+
+}
+
+
+/* Membership Agreement Overview */
+
+
+.membership-agreement-overview {
+
+	margin: 0 0 40px 0;
+	padding: 0 0 20px 0;
+	border-bottom: 1px solid rgb(188, 190, 192);
+
+	.group {}
+
+}
+
+
+/* Membership Name */
+
+
+.membership-name {
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 20px 0 0;
+
+	}
+
+	.title {}
+
+	/* Membership Dues */
+
+	.membership-dues {
+
+		margin: 0 0 40px 0;
+
+		table {
+
+			margin: 0 0 20px 0;
+			border: none;
+
+		}
+
+			thead {
+
+				background: none;
+
+			}
+
+			tbody {}
+
+				tr {}
+
+					th {
+
+						padding: 0 0 20px 0;
+						@include font-size(20);
+						line-height: (24/20) + em;
+						@include proxima-nova-regular;
+						color: $black;
+						background: none;
+
+					}
+
+					td {
+
+						padding-left: 0;
+						padding-right: 0;
+
+					}
+
+						.label {}
+
+						.amount {}
+
+				/* Total */
+
+				.total {
+
+					border-top: 1px solid rgb(209, 211, 212);
+
+					.label {
+
+						@include proxima-nova-bold;
+						color: $orange;
+
+					}
+
+					.amount {
+
+						@include proxima-nova-bold;
+						color: $orange;
+
+					}
+
+				}
+
+	}
+
+	/* Membership Name List */
+
+	.membership-name-list {
+
+		.new-monthly-cost {
+
+			margin: 0 0 20px 0;
+
+		}
+
+		.purchase-location {
+
+			margin: 0 0 20px 0;
+
+		}
+
+		.date-signed {}
+
+			.label {
+
+				@include proxima-nova-bold;
+
+			}
+
+			.detail {}
+
+	}
+
+}
+
+
+/* Client Information */
+
+
+.client-information {
+
+	@media screen and (min-width: 600px) {
+
+		float: left;
+		width: 50%;
+		padding: 0 0 0 20px;
+
+	}
+
+	.title {
+
+		@include font-size(20);
+		line-height: (24/20) + em;
+
+	}
+
+	.client-information-list {}
+
+		.member-number {
+
+			margin: 0 0 20px 0;
+
+		}
+
+		.member-name {
+
+			margin: 0 0 20px 0;
+
+		}
+
+		.phone {
+
+			margin: 0 0 20px 0;
+
+		}
+
+		.credit-card-information {
+
+			margin: 0 0 20px 0;
+
+		}
+
+		.billing-address {
+
+			margin: 0 0 20px 0;
+
+		}
+
+		.monthly-draft-date {
+
+			margin: 0 0 20px 0;
+
+		}
+
+			.label {
+
+				@include proxima-nova-bold;
+
+			}
+
+			.detail {}
+
+}
+
+
+/* Available Pre-Paid Memberships */
+
+
+.available-pre-paid-memberships {
+
+	.filter {
+
+		@media screen and (min-width: 600px) {
+
+			margin-bottom: 0;
+			@include group;
+
+		}
+
+		.title {
+
+			@media screen and (min-width: 600px) {
+
+				float: left;
+				width: 60%;
+				padding: 0 40px 0 0;
+
+			}
+
+		}
+
+		.filter-options {
+
+			@media screen and (min-width: 600px) {
+
+				float: right;
+				width: 40%;
+
+			}
+
+		}
+
+	}
+
+	/* List of Available Packages */
+
+	.list-of-available-packages {
+
+		.panelbar {
+
+			margin: 0;
+			padding: 0;
+			border: none;
+			outline: none;
+
+		}
+
+			.inner-wrap {
+
+				&.k-state-active {
+
+					.k-link {
+
+						.k-icon {
+
+							background-position: -30px -30px;
+
+						}
+
+					}
+
+				}
+
+			}
+
+			.k-link {
+
+				position: relative;
+				display: block;
+				margin: 0 0 20px 0;
+				padding: 7px 40px 6px 10px;
+				@include font-size(16);
+				line-height: (20/16) + em;
+				text-transform: uppercase;
+				color: $white;
+				background: $pink;
+				@include border-radius(2px);
+				cursor: pointer;
+
+				.k-icon {
+
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -15px;
+					width: 30px;
+					height: 30px;
+					background: url(/a/img/toggle.svg) 0 -30px;
+
+					.no-svg & {
+
+						background-image: url(/a/img/toggle.png);
+
+					}
+
+				}
+
+			}
+
+			.k-content {}
+
+				.k-block {
+
+					.title {
+
+						@include font-size(20);
+						line-height: (24/20) + em;
+						color: $orange;
+
+					}
+
+					.group {}
+
+						.overview {
+
+							@media screen and (min-width: 600px) {
+
+								float: left;
+								width: 50%;
+								padding: 0 20px 0 0;
+
+							}
+
+							@media screen and (min-width: 1000px) {
+
+								width: 33.33333%;
+
+							}
+
+							ul {}
+
+								li {
+
+									&:last-of-type {
+
+										@media screen and (min-width: 600px) {
+
+											margin: 0;
+
+										}
+
+									}
+
+								}
+
+									b {
+
+										display: block;
+
+									}
+
+						}
+
+						.video {
+
+							display: none;
+
+							@media screen and (min-width: 1000px) {
+
+								float: left;
+								width: 33.33333%;
+								display: block;
+
+							}
+
+							iframe {}
+
+						}
+
+						.options {
+
+							@media screen and (min-width: 600px) {
+
+								float: left;
+								width: 50%;
+								padding: 0 0 0 20px;
+
+							}
+
+							@media screen and (min-width: 1000px) {
+
+								width: 33.33333%;
+								padding: 0 0 0 40px;
+
+							}
+
+							ul {}
+
+								li {}
+
+									a {
+
+										&:hover {}
+
+									}
+
+							.k-button {
+
+								display: block;
+								margin: 0;
+
+							}
+
+						}
+
+				}
+
+	}
+
+}
+
+
+/* Available Services by Bed Level */
+
+
+.available-services-by-bed-level {
+
+	.filter {
+
+		@media screen and (min-width: 600px) {
+
+			margin-bottom: 0;
+			@include group;
+
+		}
+
+		.title {
+
+			@media screen and (min-width: 600px) {
+
+				float: left;
+				width: 60%;
+				padding: 0 40px 0 0;
+
+			}
+
+		}
+
+		.filter-options {
+
+			@media screen and (min-width: 600px) {
+
+				float: right;
+				width: 40%;
+
+			}
+
+		}
+
+	}
+
+	/* List of Available Packages */
+
+	.list-of-available-services {
+
+		.panelbar {
+
+			margin: 0;
+			padding: 0;
+			border: none;
+			outline: none;
+
+			.k-link {
+
+				border-color: $pink;
+
+			}
+
+		}
+
+			.inner-wrap {
+
+				&.k-state-active {
+
+					.k-link {
+
+						.k-icon {
+
+							background-position: -30px -30px;
+
+						}
+
+					}
+
+				}
+
+			}
+
+			.k-link {
+
+				position: relative;
+				display: block;
+				margin: 0 0 20px 0;
+				padding: 7px 40px 6px 10px;
+				@include font-size(16);
+				line-height: (20/16) + em;
+				text-transform: uppercase;
+				color: $white;
+				background: $pink;
+				@include border-radius(2px);
+				border: 1px solid $pink;
+				cursor: pointer;
+
+				.k-icon {
+
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -15px;
+					width: 30px;
+					height: 30px;
+					background: url(/a/img/toggle.svg) 0 -30px;
+
+					.no-svg & {
+
+						background: url(/a/img/toggle.png);
+
+					}
+
+				}
+
+			}
+
+			.k-content {}
+
+				.available-service-overview {
+
+					@media screen and (min-width: 600px) {
+
+						@include group;
+
+					}
+
+					.photo {
+
+						margin: 0 0 20px 0;
+
+						@media screen and (min-width: 600px) {
+
+							float: left;
+							width: 40%;
+
+						}
+
+						img {}
+
+					}
+
+					.options {
+
+						@media screen and (min-width: 600px) {
+
+							float: left;
+							width: 60%;
+							padding: 50px 0 0 0;
+							@include group;
+
+						}
+
+						ul {
+
+							@media screen and (min-width: 600px) {
+
+								float: right;
+
+							}
+
+						}
+
+							li {}
+
+								.k-button {
+
+									display: block;
+									margin: 0;
+
+								}
+
+					}
+
+				}
+
+				.k-block {
+
+					.title {
+
+						@include font-size(20);
+						line-height: (24/20) + em;
+						color: $orange;
+
+					}
+
+					.group {}
+
+						.bed-type {
+
+							margin: 0 0 20px 0;
+
+							@media screen and (min-width: 565px) {
+
+								float: left;
+								width: 33.33333%;
+								padding: 0 20px 0 0;
+
+							}
+
+							@media screen and (min-width: 1000px) {
+
+								width: 25%;
+								padding: 0 20px 0 0;
+
+							}
+
+						}
+
+						.includes {
+
+							margin: 0 0 20px 0;
+
+							@media screen and (min-width: 565px) {
+
+								float: left;
+								width: 33.33333%;
+								padding: 0 20px 0 20px;
+
+							}
+
+							@media screen and (min-width: 1000px) {
+
+								width: 25%;
+								padding: 0 20px 0 0;
+
+							}
+
+						}
+
+						.purchase-price {
+
+							margin: 0 0 20px 0;
+
+							@media screen and (min-width: 565px) {
+
+								float: left;
+								width: 33.33333%;
+								padding: 0 0 0 20px;
+
+							}
+
+							@media screen and (min-width: 1000px) {
+
+								width: 25%;
+								padding: 0 20px 0 0;
+
+							}
+
+							.label {
+
+								text-transform: uppercase;
+
+							}
+
+						}
+
+						.monthly-cost {
+
+							margin: 0 0 20px 0;
+
+							@media screen and (min-width: 565px) {
+
+								float: left;
+								width: 33.33333%;
+								padding: 0 20px 0 0;
+
+							}
+
+							@media screen and (min-width: 1000px) {
+
+								width: 25%;
+								padding: 0 20px 0 0;
+
+							}
+
+						}
+
+						.due-immediately {
+
+							margin: 0 0 20px 0;
+
+							@media screen and (min-width: 565px) {
+
+								float: left;
+								width: 33.33333%;
+								padding: 0 20px 0 20px;
+
+							}
+
+							@media screen and (min-width: 1000px) {
+
+								width: 25%;
+								padding: 0 20px 0 0;
+
+							}
+
+						}
+
+						.pro-rated-cost {
+
+							margin: 0 0 20px 0;
+
+							@media screen and (min-width: 565px) {
+
+								float: left;
+								width: 33.33333%;
+								padding: 0 0 0 20px;
+
+							}
+
+							@media screen and (min-width: 1000px) {
+
+								width: 25%;
+								padding: 0 20px 0 0;
+
+							}
+
+						}
+
+						.purchase {
+
+							@media screen and (min-width: 565px) {
+
+								clear: both;
+								float: right;
+								width: 33.33333%;
+								padding: 0 0 0 20px;
+
+							}
+
+							@media screen and (min-width: 1000px) {
+
+								clear: none;
+								float: left;
+								width: 25%;
+
+							}
+
+							.k-button {
+
+								margin: 0;
+
+							}
+
+						}
+
+							.label {
+
+								margin: 0;
+								@include proxima-nova-bold;
+								text-transform: none;
+
+							}
+
+							.detail {}
+
+				}
+
+	}
+
+}
+
+
+/* Available Upgrade Dollars */
+
+
+.available-upgrade-dollars {
+
+	.filter {
+
+		@media screen and (min-width: 600px) {
+
+			margin-bottom: 0;
+			@include group;
+
+		}
+
+		.title {
+
+			@media screen and (min-width: 600px) {
+
+				float: left;
+				width: 60%;
+				padding: 0 40px 0 0;
+
+			}
+
+		}
+
+		.filter-options {
+
+			@media screen and (min-width: 600px) {
+
+				float: right;
+				width: 40%;
+
+			}
+
+		}
+
+	}
+
+	.k-block {
+
+		&:last-of-type {
+
+			margin: 0;
+
+		}
+
+		.title {
+
+			@include font-size(20);
+			line-height: (24/20) + em;
+			color: $orange;
+
+		}
+
+		.group {}
+
+			.bed-type {
+
+				margin: 0 0 20px 0;
+
+				@media screen and (min-width: 450px) {
+
+					float: left;
+					width: 50%;
+					padding: 0 20px 0 0;
+
+				}
+
+				@media screen and (min-width: 650px) {
+
+					width: 33.33333%;
+					padding: 0 20px 0 0;
+
+				}
+
+			}
+
+			.purchase-price {
+
+				margin: 0 0 20px 0;
+
+				@media screen and (min-width: 450px) {
+
+					float: left;
+					width: 50%;
+					padding: 0 0 0 20px;
+
+				}
+
+				@media screen and (min-width: 650px) {
+
+					width: 33.33333%;
+					padding: 0 0 0 20px;
+
+				}
+
+			}
+
+			.purchase {
+
+				@media screen and (min-width: 450px) {
+
+					clear: both;
+					float: right;
+
+				}
+
+				@media screen and (min-width: 650px) {
+
+					clear: none;
+					float: left;
+					width: 33.33333%;
+					@include group;
+
+				}
+
+			}
+
+				.label {
+
+					margin: 0;
+					@include proxima-nova-bold;
+					text-transform: none;
+
+				}
+
+				.detail {}
+
+				.k-button {
+
+					margin: 0;
+
+					@media screen and (min-width: 650px) {
+
+						float: right;
+
+					}
+
+				}
+
+	}
+
+}
+
+
+/* Freeze Agreement */
+
+
+.freeze-agreement {
+
+	margin: 40px 0 0 0;
+
+	form {}
+
+		.title {
+
+			@include font-size(20);
+			line-height: (24/20) + em;
+			color: $orange;
+
+		}
+
+		fieldset {
+
+			margin: 0 0 40px 0;
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+		}
+
+			legend {
+
+				margin: 0 0 20px 0;
+				@include font-size(16);
+				line-height: (22/16) + em;
+				text-transform: uppercase;
+				color: $black;
+
+			}
+
+			.effective-date {
+
+				margin: 0 0 20px 0;
+
+				.label {}
+
+				.detail {}
+
+			}
+
+			.disclaimer {
+
+				margin: 0 0 20px 0;
+
+				a {
+
+					&:hover {}
+
+				}
+
+			}
+
+			p {}
+
+			ul {}
+
+				li {}
+
+					label {}
+
+}
+
+
+/* Change Account */
+
+
+.change-account {
+
+	margin: 0 0 40px 0;
+
+	legend {
+
+		width: 100%;
+		margin: 0 0 20px 0;
+		padding: 0 0 5px 0;
+		@include font-size(16);
+		line-height: (20/16) + em;
+		text-transform: uppercase;
+		color: $black;
+		border-bottom: 1px solid rgb(209, 211, 212);
+
+	}
+
+	p {}
+
+	.k-button {
+
+		margin: 0;
+
+	}
+
+}
+
+
+/* Freeze Account */
+
+
+.freeze-account {
+
+	margin: 0 0 40px 0;
+
+	legend {
+
+		width: 100%;
+		margin: 0 0 20px 0;
+		padding: 0 0 5px 0;
+		@include font-size(16);
+		line-height: (20/16) + em;
+		text-transform: uppercase;
+		color: $black;
+		border-bottom: 1px solid rgb(209, 211, 212);
+
+	}
+
+	p {}
+
+	.k-button {
+
+		margin: 0;
+
+	}
+
+}
+
+
+/* Favorite Salon */
+
+
+.favorite-salon {
+
+	margin: 40px 0;
+
+}
+
+
+/* Recently Visited Salons */
+
+
+.recently-visited-salons {
+
+	@media screen and (min-width: 600px) {
+
+		text-align: justify;
+		@include placeholder;
+
+	}
+
+	.k-block {
+
+		margin: 20px 0 0 0;
+
+		@media screen and (min-width: 600px) {
+
+			display: inline-block;
+			width: 48%;
+			text-align: left;
+			vertical-align: top;
+
+		}
+
+	}
+
+		.location {
+
+			margin: 0;
+
+		}
+
+			.name {
+
+				@include font-size(16);
+				line-height: (20/16) + em;
+				color: $orange;
+
+			}
+
+			.date {}
+
+			.time {}
+
+			.bed {}
+
+			.tanning-time {}
+
+}
+
+
+/* Cancel Agreement */
+
+
+.cancel-agreement {
+
+	margin: 40px 0 0 0;
+
+	form {}
+
+		.title {
+
+			@include font-size(16);
+			line-height: (20/16) + em;
+
+		}
+
+		fieldset {
+
+			margin: 0 0 40px 0;
+
+			&:last-of-type {
+
+				margin: 0;
+
+			}
+
+		}
+
+			legend {
+
+				margin: 0 0 20px 0;
+				@include font-size(16);
+				line-height: (22/16) + em;
+				text-transform: uppercase;
+				color: $black;
+
+			}
+
+			.effective-date {
+
+				margin: 0 0 20px 0;
+
+				.label {}
+
+				.detail {}
+
+			}
+
+			.disclaimer {
+
+				margin: 0 0 20px 0;
+
+				a {
+
+					&:hover {}
+
+				}
+
+			}
+
+			p {}
+
+			ul {}
+
+				li {}
+
+					label {}
+
+}
+
+
+/* Billing Information Form */
+
+
+.billing-information-form {
+
+	form {}
+
+		.group {
+
+			&:last-of-type {
+
+				.subgroup {
+
+					@media screen and (min-width: 600px) {
+
+						float: right;
+						padding: 0 0 0 20px;
+
+					}
+
+					&:last-of-type {
+
+						padding: 0 20px 0 0;
+
+					}
+
+				}
+
+			}
+
+		}
+
+			.subgroup {
+
+				@media screen and (min-width: 600px) {
+
+					float: left;
+					width: 50%;
+					padding: 0 20px 0 0;
+
+				}
+
+				&:last-of-type {
+
+					@media screen and (min-width: 600px) {
+
+						padding: 0 0 0 20px;
+
+					}
+
+				}
+
+			}
+
+		.k-button {
+
+			margin: 10px 0 40px 0;
+
+			@media screen and (min-width: 600px) {
+
+				margin: 0;
+
+			}
+
+		}
+
+}
+
+
+/* Profile Form */
+
+
+.profile-form {
+
+	form {}
+
+		.group {}
+
+			.subgroup {
+
+				@media screen and (min-width: 600px) {
+
+					float: left;
+					width: 50%;
+					padding: 0 20px 0 0;
+
+				}
+
+				&:last-of-type {
+
+					@media screen and (min-width: 600px) {
+
+						padding: 0 0 0 20px;
+
+					}
+
+				}
+
+			}
+
+}
+
+
+/* Edit Password Form */
+
+
+.edit-password-form {
+
+	form {}
+
+		.group {}
+
+			.subgroup {
+
+				@media screen and (min-width: 600px) {
+
+					float: left;
+					width: 50%;
+					padding: 0 20px 0 0;
+
+				}
+
+				&:last-of-type {
+
+					@media screen and (min-width: 600px) {
+
+						padding: 0 0 0 20px;
+
+					}
+
+				}
+
+			}
+
+			.k-button {
+
+				margin: 30px 0 0 0;
+
+			}
+
+}
+
+
+/* System Notifications */
+
+
+#system-notifications {
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 20px;
+	color: $white;
+	background: $teal;
+	background: rgba($teal, 0.95);
+	z-index: 100;
+
+	@media screen and (min-width: 840px) {
+
+		padding: 40px;
+
+	}
+
+	.group { max-width: 840px; }
+
+		.description {
+
+			padding: 0 20px 0 0;
+			@include font-size(20);
+			line-height: (24/20) + em;
+			text-align: center;
+
+			@media screen and (min-width: 600px) {}
+
+			p {}
+
+		}
+
+		.k-button {
+
+			float: right;
+			margin: 0;
+
+			@media screen and (min-width: 600px) {}
+
+		}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Specialized Calls
+
+
+/* Individual Form Elements */
+
+
+.k-button {
+
+	#new-account.step-four & {
+
+		margin: 20px 0 0 0;
+
+	}
+
+	&.go-to {}
+
+	&.back-to {
+
+		#education.beds-and-booths & {
+
+			margin: 0 0 30px 0;
+
+		}
+
+	}
+
+}
+
+
+/* Individual Block Elements */
+
+
+h2 {
+
+	#new-account.success & {
+
+		@include font-size(20);
+		line-height: (24/20) + em;
+
+	}
+
+}
+
+
+/* Welcome */
+
+
+#welcome {
+
+	// Index
+
+	&.index {}
+
+}
+
+
+/* New Account */
+
+
+#new-account {
+
+	&.index {}
+
+	&.step-three {
+
+		.k-dropdown {
+
+			max-width: 630px;
+
+		}
+
+	}
+
+}
+
+
+/* Dashboard */
+
+
+#dashboard {
+
+	// Landing Page
+
+	// Title...
+
+}
+
+
+/* Tanning */
+
+
+#tanning {}
+
+
+/* Education */
+
+
+#education {}
+
+
+/* Profile */
+
+
+#profile {}
+
+
+#notifications-panel {
+
+	position: fixed;
+	display: none;
+	top: 95px;
+	right: 0;
+	width: 100%;
+	max-width: 440px;
+	padding: 0 20px;
+	z-index: 999;
+
+	@media screen and (min-width: 840px) {
+
+		top: 105px;
+
+	}
+
+	&.active {
+
+		display: block;
+
+	}
+
+	.inner-wrap {
+
+		position: relative;
+		width: 100%;
+		max-width: 420px;
+		background: $white;
+		@include border-radius(3px);
+		@include box-shadow(0 3px 12px rgba($black, 0.45));
+
+		@media screen and (min-width: 440px) {
+
+			width: 400px;
+			max-width: none;
+
+		}
+
+		&:before {
+
+			position: absolute;
+			right: 45px;
+			top: -36px;
+			content: "";
+			width: 44px;
+			height: 38px;
+			background: url(/a/img/notification-riser.svg);
+			z-index: 5;
+
+			@media screen and (min-width: 840px) {
+
+				right: 80px;
+
+			}
+
+		}
+
+	}
+
+		.header {
+
+			padding: 15px 15px 13px 15px;
+			@include font-size(20);
+			line-height: (24/20) + em;
+			@include proxima-nova-bold;
+			text-transform: uppercase;
+			color: $white;
+			background: $yellow;
+			@include border-radius(3px 3px 0 0);
+
+		}
+
+		.notifications-list {
+
+			margin: 0 0 15px 0;
+
+			ol {}
+
+				li {
+
+					position: relative;
+					padding: 15px 60px 15px 15px;
+					border-bottom: 1px solid rgb(168, 170, 173);
+
+					&:last-of-type {
+
+						border: none;
+
+					}
+
+				}
+
+					time {
+
+						display: none;
+
+					}
+
+					.title {
+
+						display: inline;
+						@include font-size(14);
+						line-height: (16/14) + em;
+						text-transform: uppercase;
+						color: rgb(109, 110, 113);
+
+					}
+
+					p {
+
+						display: inline;
+						@include font-size(14);
+						line-height: (16/14) + em;
+						color: rgb(109, 110, 113);
+
+					}
+
+					.close {
+
+						position: absolute;
+						right: 15px;
+						top: 11px;
+						width: 30px;
+						height: 30px;
+						background: url(/a/img/close.svg);
+						@include hide-text;
+						cursor: pointer;
+
+					}
+
+		}
+
+		.k-button {
+
+			position: relative;
+			left: 15px;
+
+		}
+
+}

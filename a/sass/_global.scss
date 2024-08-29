@@ -1,0 +1,651 @@
+
+//------------------------------------------------------------
+//	Miscellaneous
+//------------------------------------------------------------
+
+
+// Font Size
+
+
+@mixin font-size($font-size: 16) {
+	font-size: #{$font-size}px;
+	font-size: #{$font-size / 10}rem;
+}
+
+
+// Higher Density Screens
+
+
+@mixin retina() {
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+
+		@content;
+
+	}
+
+}
+
+
+// Self-Clearing Elements
+
+
+@mixin group {
+
+	&:after {
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+		font-size: 0;
+	}
+
+	.lt-ie8 & { zoom: 1; }
+
+}
+
+
+// Helper for Justified Elements
+
+
+@mixin placeholder {
+
+	&:after {
+	
+		content: "";
+		display: inline-block;
+		width: 100%;
+
+	}
+
+}
+
+
+//------------------------------------------------------------
+//	Gradients
+//------------------------------------------------------------
+
+
+// Horizontal
+
+
+@mixin horizontal($startColor: $white, $endColor: $lightergrey) {
+
+	background-color: $endColor;
+	background-image : -webkit-gradient(linear, 0 0, 100% 0, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+	background-image : -webkit-linear-gradient(left, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+	background-image : -moz-linear-gradient(left, $startColor, $endColor); // FF 3.6+
+	background-image : -ms-linear-gradient(left, $startColor, $endColor); // IE10
+	background-image : -o-linear-gradient(left, $startColor, $endColor); // Opera 11.10
+	background-image : linear-gradient(left, $startColor, $endColor); // W3C
+	background-repeat: repeat-x;
+
+}
+
+
+// Vertical
+
+
+@mixin vertical($startColor: $white, $endColor: $lightergrey) {
+
+	background-image : -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+	background-image : -webkit-linear-gradient(top, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+	background-color : $endColor;
+	background-image : -moz-linear-gradient(top, $startColor, $endColor); // FF 3.6+
+	background-image : -ms-linear-gradient(top, $startColor, $endColor); // IE10
+	background-image : -o-linear-gradient(top, $startColor, $endColor); // Opera 11.10
+	background-image : linear-gradient(top, $startColor, $endColor); // W3C
+	background-repeat: repeat-x;
+
+}
+
+@mixin vertical-gradient($top-half, $bottom-half) {
+
+	background: $bottom-half;
+	background: -moz-linear-gradient(top, $top-half 50%, $bottom-half 50%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,$top-half), color-stop(50%, $bottom-half));
+	background: -webkit-linear-gradient(top, $top-half 50%, $bottom-half 50%);
+	background: -o-linear-gradient(top, $top-half 50%, $bottom-half 50%);
+	background: -ms-linear-gradient(top, $top-half 50%, $bottom-half 50%);
+	background: linear-gradient(to bottom, $top-half 50%, $bottom-half 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$top-half', endColorstr='$bottom-half',GradientType=0 );
+
+}
+
+
+// Directional
+
+
+@mixin directional($startColor: $white, $endColor: $lightergrey, $deg: 45deg) {
+
+	background-color : $endColor;
+	background-image : -moz-linear-gradient($deg, $startColor, $endColor); // FF 3.6+
+	background-image : -ms-linear-gradient($deg, $startColor, $endColor); // IE10
+	background-image : -webkit-linear-gradient($deg, $startColor, $endColor); // Safari 5.1+, Chrome 10+
+	background-image : -o-linear-gradient($deg, $startColor, $endColor); // Opera 11.10
+	background-image : linear-gradient($deg, $startColor, $endColor); // W3C
+	background-repeat: repeat-x;
+
+}
+
+
+//------------------------------------------------------------
+//	Shadows
+//------------------------------------------------------------
+
+
+// Box Shadow
+
+@mixin box-shadow($shadows...) {
+	-webkit-box-shadow: $shadows;
+	-moz-box-shadow: $shadows;
+	box-shadow: $shadows;
+	}
+
+
+//------------------------------------------------------------
+//	Transforms
+//------------------------------------------------------------
+
+
+// Rotate
+
+
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
+	}
+
+// Scale
+
+
+@mixin scale($ratio) {
+	-webkit-transform: scale($ratio);
+	-moz-transform: scale($ratio);
+	-ms-transform: scale($ratio);
+	-o-transform: scale($ratio);
+	transform: scale($ratio);
+	}
+
+
+// Skew
+
+
+@mixin skew($x: 0, $y: 0) {
+	-webkit-transform: skew($x, $y);
+	-moz-transform: skew($x, $y);
+	-ms-transform: skew($x, $y);
+	-o-transform: skew($x, $y);
+	transform: skew($x, $y);
+	}
+
+
+// Transition(s)
+
+
+@mixin transition($transitions...) {
+	-webkit-transition: $transitions;
+	-moz-transition: $transitions;
+	-ms-transition: $transitions;
+	-o-transition: $transitions;
+	transition: $transitions;
+	}
+
+
+//------------------------------------------------------------
+//	Title
+//------------------------------------------------------------
+
+
+// Border Radius
+
+
+@mixin border-radius($border-radii...) {
+	-webkit-border-radius: $border-radii;
+	-moz-border-radius: $border-radii;
+  	border-radius: $border-radii;
+}
+
+
+// Opacity
+
+
+@mixin opacity($opacity: .50) {
+	-webkit-opacity: $opacity;
+	-moz-opacity: $opacity;
+	opacity: $opacity;
+	}
+
+
+// Background Size
+
+
+@mixin background-size($size){
+	-webkit-background-size: $size;
+	-moz-background-size: $size;
+	-o-background-size: $size;
+	background-size: $size;
+	}
+
+
+// Background Clip
+
+
+@mixin background-clip($clip) {
+	-webkit-background-clip: $clip;
+	-moz-background-clip: $clip;
+	background-clip: $clip;
+	}
+
+
+//------------------------------------------------------------
+//	Visibility
+//------------------------------------------------------------
+
+
+// Image Replacement
+
+
+@mixin hide-text() {
+	text-indent: -9999px;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+
+// Hide from visual and speaking browsers
+
+
+@mixin hidden() {
+	display: none !important;
+	visibility: hidden;
+	}
+
+
+// Hide but maintain layout
+
+
+@mixin invisible() { visibility: hidden; }
+
+
+// Hidden but available to speaking browsers
+
+
+@mixin visuallyhidden() {
+
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+
+
+	// Make visuallyhidden focusable with a keyboard
+
+	
+	&.focusable {
+
+		&:active,
+		&:focus {
+			position: static;
+			clip: auto;
+			height: auto;
+			width: auto;
+			margin: 0;
+			overflow: visible;
+			}
+			
+	}
+	
+}
+
+
+//------------------------------------------------------------
+//	Hacks
+//------------------------------------------------------------
+
+// Don't use these unless you reallllly need to.
+
+
+// Mozilla Fixes
+
+@mixin mozilla {
+
+	@-moz-document url-prefix() {
+	
+		@content;
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @todo Need to organize */
+
+
+
+
+
+
+
+@mixin box-orient($direction) {
+	-moz-box-orient: $direction;
+	-webkit-box-orient: $direction;
+	-ms-box-orient: $direction;
+	box-orient: $direction;
+}
+
+@mixin box($type) {
+	display: #{-moz-}$type;	
+	display: #{-webkit-}$type;
+	display: #{-ms-}$type;	
+	display: $type;
+}
+
+@mixin box-direction($direction) {
+    -moz-box-direction: $direction;
+    -webkit-box-direction: $direction;
+    -ms-box-direction: $direction;
+    box-direction: $direction;
+}
+
+@mixin box-flex($amount) {
+    -moz-box-flex: $amount;
+    -webkit-box-flex: $amount;
+    -ms-box-flex: $amount;
+    box-flex: $amount;
+}
+
+@mixin box-align($alignment) {
+    -moz-box-align: $alignment;
+    -webkit-box-align: $alignment;
+    -ms-box-align: $alignment;
+    box-align: $alignment;
+}
+
+@mixin box-pack($pack) {
+    -moz-box-pack: $pack;
+    -webkit-box-pack: $pack;
+    -ms-box-pack: $pack;
+    box-pack: $pack;
+}
+
+@mixin border-radius($border-radii...) {
+    -moz-border-radius: $border-radii;
+    -webkit-border-radius: $border-radii;
+    border-radius: $border-radii;
+}
+
+@mixin guarded-border-radius($value) {
+
+	@if $value < 0 {
+	
+		@include border-radius(0);
+	
+	} @else {
+	
+		@include border-radius($value);
+	
+	}
+
+}
+
+@mixin box-shadow($box-shadows...) {
+    -webkit-box-shadow: $box-shadows;
+    box-shadow: $box-shadows;
+}
+
+// @mixin window-shadow($shadow-color) when not ($shadow-color = transparent) {
+
+	// border-color: $shadow-color;
+
+	// @include box-shadow($window-shadow-style lighten($shadow-color, 50%));
+
+	// &.k-state-focused {
+
+		// border-color: $shadow-color;
+
+		// @include box-shadow($window-shadow-style $shadow-color);
+
+	// }
+
+// }
+
+// @mixin window-shadow($shadow-color) when ($shadow-color = transparent) and (lightness($widget-background-color) < 50%) {
+
+	// border-color: $widget-border-color;
+
+	// &.k-state-focused {
+
+		// border-color: lighten($widget-border-color, 20%);
+
+	// }
+
+// }
+
+// @mixin window-shadow($shadow-color) when ($shadow-color = transparent) and (lightness($widget-background-color) >= 50%) {
+
+	// border-color: $widget-border-color;
+
+	// &.k-state-focused {
+
+		// border-color: darken($widget-border-color, 10%);
+
+	// }
+
+// }
+
+@mixin box-sizing($type) {
+    -moz-box-sizing: $type;
+    -webkit-box-sizing: $type;
+    box-sizing: $type;
+}
+
+@mixin background-clip($type) {
+    -moz-background-clip: $type;
+    -webkit-background-clip: $type;
+    background-clip: $type;
+}
+
+@mixin transform($transforms...) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    -o-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin composite-background($gradient) {
+
+	@if $gradient == none {
+	
+		background-image: $texture;
+	
+	} @else {
+	
+		background-image: $fallback-texture;
+		background-image: $texture, -webkit-linear-gradient(top, #{$gradient});
+		background-image: $texture, -moz-linear-gradient(top, #{$gradient});
+		background-image: $texture, -o-linear-gradient(top, #{$gradient});
+		// background-image: $texture, ~"linear-gradient(to bottom, #{$gradient})";
+	
+	}
+	
+}
+
+@mixin tool-icon-background($gradient) {
+
+	@if $gradient == none {
+	
+		background-image: $sprite-image;
+	
+	} @else {
+	
+		background-image: $sprite-image;
+		background-image: $sprite-image, -webkit-linear-gradient(top, #{$gradient});
+		background-image: $sprite-image,	-moz-linear-gradient(top, #{$gradient});
+		background-image: $sprite-image,	  -o-linear-gradient(top, #{$gradient});
+		// background-image: $sprite-image,	   ~"linear-gradient(to bottom, ${gradient})";
+	
+	}
+	
+}
+
+@mixin selection($color) {
+
+	::selection {
+
+		background-color: $color;
+		text-shadow: none;
+		color: #fff;
+
+	}
+
+	::-moz-selection {
+
+		background-color: $color;
+		text-shadow: none;
+		color: #fff;
+
+	}
+
+}
+
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin border-radius($border-radii...) {
+    -moz-border-radius: $border-radii;
+    -webkit-border-radius: $border-radii;
+    -o-border-radius: $border-radii;
+    border-radius: $border-radii;
+}
+
+@mixin prohibit-selection {
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+// outputs background-position
+// @mixin sprite-position($row, $column) when (ispixel($column)) {
+    // background-position: @row @column;
+// }
+
+// outputs background-position in a grid
+// @mixin sprite-position($row, $column) when not (ispixel($column)) {
+    // background-position: (-$row * $grid-size) (-$column * $grid-size);
+// }
+
+// outputs background-position and hover state background position
+
+// @mixin sprite-hoverable($row, $column, $grid-size: 16px) when (ispixel($column)) {
+
+    // @include sprite-position($row, $column);
+
+    // .k-link:not(.k-state-disabled):hover > &,
+    // .k-state-hover &,
+    // .k-button:hover &,
+    // .k-textbox:hover &,
+    // .k-button:active & {
+
+	    // @include sprite-position($row - $grid-size, $column);
+    // }
+
+// }
+
+// outputs background-position and hover state background position
+
+// @mixin sprite-hoverable-rtl($row, $column, $grid-size: 16px) when (ispixel($column)) {
+
+    // .k-rtl & {
+        
+        	// @include sprite-position($row, $column);
+    // }
+
+    // .k-rtl .k-link:not(.k-state-disabled):hover > &,
+    // .k-rtl .k-state-hover &,
+    // .k-rtl .k-button:hover &,
+    // .k-rtl .k-textbox:hover &,
+    // .k-rtl .k-button:active & {
+        // @include sprite-position($row - $grid-size, $column);
+    // }
+// }
+
+// outputs background-position and hover state background position, aligned in a grid
+
+// @mixin sprite-hoverable($row, $column) when not (ispixel($column)) {
+
+    // 	@include sprite-position($row, $column);
+
+    // .k-link:not(.k-state-disabled):hover > &,
+    // .k-state-hover &,
+    // .k-button:hover &,
+    // .k-textbox:hover &,
+    // .k-button:active & {
+
+	    // @include sprite-position($row + 1, $column);
+    // }
+// }
+
+// outputs background-position and hover state background position, aligned in a grid
+
+// @mixin sprite-hoverable-rtl($row, $column) when not (ispixel($column)) {
+    // .k-rtl & {
+        // @include sprite-position($row, $column);
+    // }
+
+    // .k-rtl .k-link:not(.k-state-disabled):hover > &,
+    // .k-rtl .k-state-hover &,
+    // .k-rtl .k-button:hover &,
+    // .k-rtl .k-textbox:hover &,
+    // .k-rtl .k-button:active & {
+        // @include sprite-position($row + 1, $column);
+    // }
+// }
+
+@mixin box-shadow($arguments...) {
+    -webkit-box-shadow: $arguments;
+    box-shadow: $arguments;
+}
+
+@mixin editor-icon($x, $y) {
+    background-position: $x $y;
+
+    &.k-state-hover,
+    &.k-state-selected {
+        background-position: ($x - 24) $y;
+    }
+}

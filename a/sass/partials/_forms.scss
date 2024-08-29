@@ -1,0 +1,1231 @@
+
+/*-------------------------------------------
+	Forms
+-------------------------------------------*/
+
+
+//-------------------------------------------
+//	Text Input
+//-------------------------------------------
+
+
+.k-textbox {
+
+	max-width: 400px;
+
+	input {}
+
+}
+
+
+//-------------------------------------------
+//	Textarea
+//-------------------------------------------
+
+
+textarea {}
+
+
+//-------------------------------------------
+//	Button
+//-------------------------------------------
+
+// These are for button and
+// input[type="submit"] elements.
+
+
+button {
+
+	// Alternate Colors
+
+	&.yellow {
+
+		background: $yellow;
+
+		&:hover {
+
+			background-color: lighten($yellow, 20%);
+
+		}
+
+	}
+
+	&.green {
+
+		background: $green;
+
+		&:hover {
+
+			background-color: lighten($green, 20%);
+
+		}
+
+	}
+
+	&.teal {
+
+		background: $teal;
+
+		&:hover {
+
+			background-color: lighten($teal, 20%);
+
+		}
+
+	}
+
+	&.blue {
+
+		background: $blue;
+
+		&:hover {
+
+			background-color: lighten($blue, 20%);
+
+		}
+
+	}
+
+	&.pink {
+
+		background: $pink;
+
+		&:hover {
+
+			background-color: lighten($pink, 20%);
+
+		}
+
+	}
+
+	&.red {
+
+		background: $red;
+
+		&:hover {
+
+			background-color: lighten($red, 20%);
+
+		}
+
+	}
+
+
+	// Cancel
+
+
+	&.cancel {
+
+		color: $blue;
+		background: none;
+		text-transform: none;
+
+	}
+
+
+	// Disabled
+
+	&[disabled="disabled"] {
+
+		color: rgb(166, 168, 171);
+		background: rgb(146, 148, 151);
+		cursor: normal;
+
+	}
+
+}
+
+
+//-------------------------------------------
+//	Links as "Buttons"
+//-------------------------------------------
+
+
+a {
+
+	&.k-button {
+
+		display: inline-block;
+		margin: 0 0 20px 0;
+		padding: 5px 15px;
+		@include font-size(16);
+		line-height: (21/16) + em;
+		@include proxima-nova-regular;
+		text-transform: uppercase;
+		color: $white;
+		background: $orange;
+		border: 1px solid $orange;
+		@include border-radius(2px);
+		outline: none;
+
+		&:hover {
+
+			background-color: lighten($orange, 20%);
+			border-color: lighten($orange, 20%);
+
+		}
+
+		// Alternate Colors
+
+		&.yellow {
+
+			background: $yellow;
+			border-color: $yellow;
+
+			&:hover {
+
+				background-color: lighten($yellow, 20%);
+				border-color: lighten($yellow, 20%);
+
+			}
+
+		}
+
+		&.green {
+
+			background: $green;
+			border-color: $green;
+
+			&:hover {
+
+				background-color: lighten($green, 20%);
+				border-color: lighten($green, 20%);
+
+			}
+
+		}
+
+		&.teal {
+
+			background: $teal;
+			border-color: $teal;
+
+			&:hover {
+
+				background-color: lighten($teal, 20%);
+				border-color: lighten($teal, 20%);
+
+			}
+
+		}
+
+		&.blue {
+
+			background: $blue;
+			border-color: $blue;
+
+			&:hover {
+
+				background-color: lighten($blue, 20%);
+				border-color: lighten($blue, 20%);
+
+			}
+
+		}
+
+		&.pink {
+
+			background: $pink;
+			border-color: $pink;
+
+			&:hover {
+
+				background-color: lighten($pink, 20%);
+				border-color: lighten($pink, 20%);
+
+			}
+
+		}
+
+		&.red {
+
+			background: $red;
+			border-color: $red;
+
+			&:hover {
+
+				background-color: lighten($red, 20%);
+				border-color: lighten($red, 20%);
+
+			}
+
+		}
+
+	}
+
+	&.go-to {
+
+		position: relative;
+		padding-right: 45px;
+		text-transform: none;
+		@include font-size(14);
+		line-height: (16/14) + em;
+
+		.k-icon {
+
+			right: 0;
+			background: url(../img/arrow.svg) 0 -30px;
+
+			.no-svg & {
+
+				background-image: url(/a/img/arrow.png);
+
+			}
+
+		}
+
+		&.gray {
+
+			.k-icon {
+
+				background-position: 0 0;
+
+			}
+
+		}
+
+	}
+
+	&.back-to {
+
+		position: relative;
+		padding-left: 45px;
+		text-transform: none;
+		@include font-size(14);
+		line-height: (16/14) + em;
+
+		.k-icon {
+
+			left: 0;
+			background: url(../img/arrow.svg) -30px -30px;
+
+			.no-svg & {
+
+				background-image: url(/a/img/arrow.png);
+
+			}
+
+		}
+
+		&.gray {
+
+			.k-icon {
+
+				background-position: -30px 0;
+
+			}
+
+		}
+
+	}
+
+		.k-icon {
+
+			position: absolute;
+			top: 50%;
+			margin-top: -15px;
+			width: 30px;
+			height: 30px;
+			@include hide-text;
+
+		}
+
+	&.no-background {
+
+		color: $orange;
+		background: none;
+		border: 1px solid $orange;
+
+		&.yellow {
+
+			border-color: $yellow;
+			color: $yellow;
+			background: none;
+
+		}
+
+		&.green {
+
+			border-color: $green;
+			color: $green;
+			background: none;
+
+		}
+
+		&.teal {
+
+			border-color: $teal;
+			color: $teal;
+			background: none;
+
+		}
+
+		&.blue {
+
+			border-color: $blue;
+			color: $blue;
+			background: none;
+
+		}
+
+		&.pink {
+
+			border-color: $pink;
+			color: $pink;
+			background: none;
+
+		}
+
+		&.red {
+
+			border-color: $red;
+			color: $red;
+			background: none;
+
+		}
+
+		&.gray {
+
+			border-color: rgb(109, 110, 113);
+			color: rgb(109, 110, 113);
+			background: none;
+
+		}
+
+		&.white {
+
+			border-color: $white;
+			color: $white;
+			background: none;
+
+		}
+
+	}
+
+	&.line {
+
+		display: block;
+
+	}
+
+}
+
+
+//-------------------------------------------
+//	Input with Icon Right
+//-------------------------------------------
+
+
+.k-space-right {
+
+	position: relative;
+	display: block;
+
+	input {
+
+		padding-right: 40px;
+
+	}
+
+	.k-icon {
+
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 30px;
+		height: 30px;
+		background: url(/a/img/arrow.svg) 0 -1px;
+		border: 1px solid rgb(109, 110, 113);
+		@include border-radius(0 2px 2px 0);
+		z-index: 5;
+
+		.no-svg & {
+
+			background-image: url(/a/img/arrow.png);
+
+		}
+
+		&:hover {
+
+			background-position: 0 -31px;
+			background-color: rgb(109, 110, 113);
+
+		}
+
+	}
+
+	// While against a background color
+
+	&.white {
+
+		input {
+
+			border-color: $white;
+
+		}
+
+		.k-icon {
+
+			border-top-color: $white;
+			border-right-color: $white;
+			border-bottom-color: $white;
+
+			&:hover {
+
+				border-color: rgb(109, 110, 113);
+
+			}
+
+		}
+
+	}
+
+}
+
+
+//-------------------------------------------
+//	Input with Icon Right
+//-------------------------------------------
+
+
+.k-space-left {
+
+	position: relative;
+	display: block;
+
+	input {
+
+		padding-left: 40px;
+
+	}
+
+	.k-icon {
+
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 30px;
+		height: 30px;
+		background: url(/a/img/arrow.svg) 0 -1px;
+		border: 1px solid rgb(109, 110, 113);
+		@include border-radius(2px 0 0 2px);
+		z-index: 5;
+
+		.no-svg & {
+
+			background-image: url(/a/img/arrow.png);
+
+		}
+
+		&:hover {
+
+			background-position: 0 -31px;
+			background-color: rgb(109, 110, 113);
+
+		}
+
+	}
+
+}
+
+
+//-------------------------------------------
+//	Autocomplete
+//-------------------------------------------
+
+
+// This is simply an input field, with an
+// <div class="k-animation-container">
+// written to the page via JavaScript.
+
+
+.k-animation-container {}
+
+	.k-list-container {
+
+		.k-list {
+
+			max-height: 200px;
+			overflow: auto;
+
+			li {}
+
+		}
+
+	}
+
+
+//-------------------------------------------
+//	Combobox
+//-------------------------------------------
+
+
+.k-combobox {
+
+	position: relative;
+	width: 100%;
+
+	.k-dropdown-wrap {
+
+		position: relative;
+		display: block;
+
+	}
+
+		input {}
+
+		.k-select {
+
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 30px;
+			height: 30px;
+			@include border-radius(0 2px 2px 0);
+			@include hide-text;
+			cursor: pointer;
+			z-index: 5;
+
+		}
+
+			.k-icon {
+
+				display: block;
+				width: 30px;
+				height: 30px;
+				background: url(/a/img/toggle.svg);
+
+				.no-svg & {
+
+					background-image: url(/a/img/toggle.png);
+
+				}
+
+			}
+
+	// While combobox is open
+
+	.k-state-active {
+
+		input {
+
+			@include border-radius(2px 2px 0 0);
+
+		}
+
+		.k-select {}
+
+			.k-icon {
+
+				background-position: -30px 0;
+
+			}
+
+	}
+
+}
+
+
+//-------------------------------------------
+//	Dropdown
+//-------------------------------------------
+
+
+.k-dropdown {
+
+	display: block;
+	max-width: 400px;
+	outline: none;
+	cursor: pointer;
+
+	.k-dropdown-wrap {
+
+		position: relative;
+		display: block;
+
+		&.k-state-active {
+
+			.k-input {
+
+				@include border-radius(2px 2px 0 0);
+
+			}
+
+		}
+
+	}
+
+		.k-input {
+
+			display: block;
+			height: 30px;
+			padding: 3px 30px 0 5px;
+			border: 1px solid rgb(109, 110, 113);
+			@include border-radius(2px);
+			overflow: hidden;
+
+		}
+
+		.k-select {
+
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 30px;
+			height: 30px;
+			@include hide-text;
+			cursor: pointer;
+			z-index: 5;
+
+		}
+
+			.k-icon {
+
+				display: block;
+				width: 30px;
+				height: 30px;
+				background: url(/a/img/toggle.svg) -30px 0;
+
+				.no-svg & {
+
+					background-image: url(/a/img/toggle.png);
+
+				}
+
+			}
+
+	// While dropdown is open...
+
+	.k-state-active {
+
+		.k-input {}
+
+		.k-select {}
+
+			.k-icon {}
+
+	}
+
+}
+
+
+
+
+
+
+.k-animation-container {
+
+	// width: 100% !important;
+	// padding-top: 30px !important;
+	overflow: hidden;
+
+	.k-list-container {
+
+		position: relative;
+		// top: 30px;
+		// width: 100% !important;
+		// padding: 0 20px !important;
+
+	}
+
+		.k-list {
+
+			background: $white;
+			border: 1px solid rgb(109, 110, 113);
+			border-top: none;
+			@include border-radius(0 0 2px 2px);
+
+		}
+
+			.k-item {
+
+				height: auto;
+				padding: 5px 5px 5px 5px;
+				border-bottom: 1px solid rgb(109, 110, 113);
+				cursor: pointer;
+
+				&:last-of-type { border: none; }
+
+			}
+
+}
+
+
+//-------------------------------------------
+//	Blocks
+//-------------------------------------------
+
+
+.k-block {
+
+	margin: 0 0 20px 0;
+	padding: 20px;
+	border: 1px solid rgb(109, 110, 112);
+	@include border-radius(3px);
+
+	// Info Box
+
+	&.k-info-colored {}
+
+		div.k-header {
+
+			margin: -20px -20px 20px -20px;
+			padding: 20px 20px 15px 20px;
+			@include font-size(20);
+			line-height: (24/20) + em;
+			text-transform: uppercase;
+			border-bottom: 1px solid rgb(109, 110, 112);
+
+		}
+
+	// Alternate Colors
+
+	&.yellow {
+
+		color: $white;
+		background: $yellow;
+		border-color: $yellow;
+
+		.k-header {
+
+			border-color: darken($yellow, 7%);
+
+		}
+
+	}
+
+	&.green {
+
+		color: $white;
+		background: $green;
+		border-color: $green;
+
+		.k-header {
+
+			border-color: darken($green, 7%);
+
+		}
+
+	}
+
+	&.teal {
+
+		color: $white;
+		background: $teal;
+		border-color: $teal;
+
+		.k-header {
+
+			border-color: darken($teal, 7%);
+
+		}
+
+	}
+
+	&.blue {
+
+		color: $white;
+		background: $blue;
+		border-color: $blue;
+
+		.k-header {
+
+			border-color: darken($blue, 7%);
+
+		}
+
+	}
+
+	&.pink {
+
+		color: $white;
+		background: $pink;
+		border-color: $pink;
+
+		.k-header {
+
+			border-color: darken($pink, 7%);
+
+		}
+
+	}
+
+	&.red {
+
+		color: $white;
+		background: $red;
+		border-color: $red;
+
+		.k-header {
+
+			border-color: darken($red, 7%);
+
+		}
+
+	}
+
+	// Success
+
+	&.k-success-colored {}
+
+	// Error
+
+	&.k-error-colored {}
+
+}
+
+
+//-------------------------------------------
+//	Window
+//-------------------------------------------
+
+
+.k-window {
+
+	position: absolute;
+	// display: inline-block;
+	width: 90% !important;
+	max-width: 500px !important;
+	border: 1px solid rgb(109, 110, 112);
+	background: $white;
+	@include border-radius(3px);
+	z-index: 9999;
+
+	.k-window-titlebar {
+
+		margin-left: 20px;
+		margin-right: 20px;
+		padding: 20px 0 0 0;
+		border-bottom: 2px solid $orange;
+		cursor: move;
+
+	}
+
+		.k-window-title {
+
+			@include font-size(28);
+			line-height: (36/28) + em;
+			text-transform: uppercase;
+			color: $orange;
+
+		}
+
+		.k-window-actions {
+
+			position: absolute;
+			right: 45px;
+			bottom: 30px;
+			// margin-top: -15px;
+			z-index: 5;
+
+			.k-window-action {}
+
+				.k-icon {}
+
+				.k-i-close {
+
+					display: block;
+					width: 30px;
+					height: 30px;
+					background: url(/a/img/close.svg);
+
+				}
+
+		}
+
+	.k-window-content {
+
+		outline: none;
+		padding: 20px 20px 60px 20px;
+
+	}
+
+		p {}
+
+		.k-button {
+
+			margin: 0;
+
+		}
+
+	.k-overlay {
+
+		background: none;
+
+	}
+
+}
+
+
+.k-overlay {
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .35);
+	z-index: 9999;
+
+	.lt-ie9 & {
+
+		background: url(/a/img/k-overlay-background.png);
+
+	}
+
+}
+
+
+//-------------------------------------------
+//	Popover
+//-------------------------------------------
+
+
+#simplemodal-overlay {
+
+	background: $black;
+
+}
+
+#simplemodal-container {
+
+	position: relative;
+
+}
+
+	.simplemodal-close {
+
+		// position: absolute;
+		// top: -15px;
+		// right: -15px;
+		// width: 30px;
+		// height: 30px;
+		// background: pink;
+		// z-index: 5;
+		//cursor: pointer;
+
+	}
+
+	.simplemodal-wrap {}
+
+		.window {
+
+			display: none;
+			max-width: 500px;
+			margin: 0 20px;
+			padding: 20px;
+			border: 1px solid rgb(109, 110, 112);
+			background: $white;
+			@include border-radius(3px);
+
+			.title {
+
+				margin: 0 0 20px 0;
+				padding: 0 0 5px 0;
+				@include font-size(28);
+				line-height: (36/28) + em;
+				text-transform: uppercase;
+				color: $orange;
+				border-bottom: 2px solid $orange;
+
+			}
+
+			p {}
+
+			.k-button {
+
+				margin: 0;
+
+			}
+
+		}
+
+
+//-------------------------------------------
+//	Checkbox
+//-------------------------------------------
+
+
+.checkbox {
+
+	position: relative;
+	padding: 20px 0 20px 25px;
+
+	input {
+
+		position: absolute;
+		left: 0;
+		top: 22px;
+		z-index: 5;
+
+	}
+
+}
+
+
+//-------------------------------------------
+//	Panelbar
+//-------------------------------------------
+
+
+.k-panelbar {
+
+	.k-item {
+
+		margin: 0 0 20px 0;
+
+		&.k-state-active {
+
+			.k-icon {
+
+				background-position: -30px 0;
+
+			}
+
+		}
+
+	}
+
+		.k-header {
+
+			position: relative;
+			display: block;
+			@include font-size(16);
+			line-height: (20/16) + em;
+			text-transform: none;
+			@include border-radius(2px);
+			padding: 7px 40px 6px 10px;
+			color: rgb(109, 110, 113);
+			border: 1px solid rgb(109, 110, 113) !important;
+
+			.k-link {
+
+				display: block;
+				padding: 7px 40px 6px 10px;
+				color: rgb(109, 110, 113);
+
+			}
+
+			.k-icon {
+
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -15px;
+				width: 30px;
+				height: 30px;
+				background: url(/a/img/toggle.svg) 0 0;
+
+			}
+
+		}
+
+		.k-content {
+
+			margin: 20px 0 0 0;
+
+		}
+
+}
+
+
+
+
+.clearfix:before,
+.clearfix:after {
+
+	// content: "";
+	// display: table;
+
+}
+
+.clearfix:after {
+
+	// clear: both;
+
+}
+
+.clearfix {
+
+	// *zoom: 1;
+
+}
+
+.prettycheckbox,
+.prettyradio {
+
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+
+}
+
+.prettycheckbox a,
+.prettyradio a {
+
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: url(/a/img/prettyCheckable-blue.png) top left no-repeat;
+	float: left;
+	cursor: pointer;
+	margin: 0;
+
+}
+
+.prettycheckbox.green a,
+.prettyradio.green a {
+
+	background-image: url(/a/img/prettyCheckable-green.png);
+
+}
+
+.prettycheckbox.red a,
+.prettyradio.red a {
+
+	background-image: url(/a/img/prettyCheckable-red.png);
+
+}
+
+.prettycheckbox.yellow a,
+.prettyradio.yellow a{ background-image: url(/a/img/prettyCheckable-yellow.png);}
+
+.prettycheckbox.gray a,
+.prettyradio.gray a{ background-image: url(/a/img/prettyCheckable-gray.png);}
+
+.prettyradio a {background-position: 0 -120px;}
+
+.prettycheckbox a:focus,
+.prettyradio a:focus {outline: 0 none;}
+
+.prettycheckbox a:focus{background-position: 0 -30px;}
+.prettyradio a:focus{background-position: 0 -150px;}
+
+.prettycheckbox a.checked{ background-position: 0 -60px; }
+.prettyradio a.checked { background-position: 0 -180px; }
+
+.prettycheckbox a.checked:focus{ background-position: 0 -90px; }
+.prettyradio a.checked:focus { background-position: 0 -210px; }
+
+.prettycheckbox label,
+.prettyradio label {
+  // display: block;
+  // float: left;
+  // margin: 6px 5px;
+  // cursor: pointer;
+}
+
+.prettycheckbox.disabled a,
+.prettyradio.disabled a,
+.prettycheckbox.disabled label,
+.prettyradio.disabled label{
+  // cursor:not-allowed;
+}
+
+.prettycheckbox.disabled a {
+  // background-position: 0 -240px;
+}
+
+.prettyradio.disabled a {
+  // background-position: 0 -270px;
+}

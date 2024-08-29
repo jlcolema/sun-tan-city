@@ -1,0 +1,458 @@
+
+/*-------------------------------------------
+	Navigation
+-------------------------------------------*/
+
+
+#nav {
+
+	display: none;
+	position: absolute;
+	top: 75px;
+	width: 100%;
+	padding: 20px 0;
+	color: $white;
+	background: rgb(35, 31, 32);
+	z-index: 999;
+
+	@media screen and (min-width: 840px) {
+
+		// display: block !important; helps override any inline styles.
+
+		display: block !important;
+		top: 86px;
+		width: 250px;
+
+	}
+
+	// Hide when a user is not signed in.
+
+	.signed-out & {
+
+		display: none !important;
+
+	}
+
+	.wrap {
+
+		padding: 0;
+
+	}
+
+}
+
+		// Primary Navigation
+
+		nav {
+
+			ul {}
+
+				li {
+
+					@include font-size(16);
+					line-height: (20/16) + em;
+					text-transform: uppercase;
+					color: $black;
+
+					&:last-of-type {
+
+						@media screen and (min-width: 840px) {
+
+							margin-bottom: 30px;
+
+						}
+
+					}
+
+				}
+
+					a {
+
+						position: relative;
+						display: block;
+						height: 50px;
+						padding: 16px 20px 0 80px;
+						color: $white;
+
+						@media screen and (min-width: 840px) {
+
+							height: 70px;
+							padding-top: 26px;
+
+						}
+
+						&:before {
+
+							content: "";
+							position: absolute;
+							left: 20px;
+							top: 0;
+							width: 50px;
+							height: 50px;
+							background: url(/a/img/nav-icons.svg);
+							z-index: 5;
+
+							@media screen and (min-width: 840px) {
+
+								top: 10px;
+
+							}
+
+						}
+
+						&:hover {
+
+							color: rgb(255, 210, 79);
+							background: $black;
+
+						}
+
+					}
+
+					// For sections that are inactive (within a purchase)
+
+					span {
+
+						position: relative;
+						display: block;
+						height: 50px;
+						padding: 16px 20px 0 80px;
+
+						@media screen and (min-width: 840px) {
+
+							height: 70px;
+							padding-top: 26px;
+
+						}
+
+						&:before {
+
+							content: "";
+							position: absolute;
+							left: 20px;
+							top: 0;
+							width: 50px;
+							height: 50px;
+							background: url(/a/img/nav-icons.svg);
+							z-index: 5;
+
+							@media screen and (min-width: 840px) {
+
+								top: 10px;
+
+							}
+
+						}
+
+					}
+
+				// Specific navigation items
+
+				.dashboard {
+
+					a {
+
+						&:before {
+
+							background-position: 0 0;
+
+						}
+
+						&:hover {
+
+							&:before {
+
+								background-position: 0 -50px;
+
+							}
+
+						}
+
+						// Active section
+
+						#dashboard & {
+
+							color: $white;
+							background: $black;
+
+							&:before {
+
+								background-position: 0 0;
+
+							}
+
+						}
+
+						// The landing page for each section is highlighted yellow
+
+						#dashboard.index & {
+
+							color: rgb(255, 210, 79);
+
+							&:before {
+
+								background-position: 0 -50px;
+
+							}
+
+						}
+
+					}
+
+					span {
+
+						&:before {
+
+							background-position: 0 -100px;
+
+						}
+
+					}
+
+				}
+
+				.tanning {
+
+					a {
+
+						&:before {
+
+							background-position: -50px 0;
+
+						}
+
+						&:hover {
+
+							&:before {
+
+								background-position: -50px -50px;
+
+							}
+
+						}
+
+						// Active section
+
+						#tanning & {
+
+							color: $white;
+							background: $black;
+
+							&:before {
+
+								background-position: -50px 0;
+
+							}
+
+						}
+
+						// The landing page for each section is highlighted yellow
+
+						#tanning.index & {
+
+							color: rgb(255, 210, 79);
+
+							&:before {
+
+								background-position: -50px -50px;
+
+							}
+
+						}
+
+					}
+
+					span {
+
+						&:before {
+
+							background-position: -50px -100px;
+
+						}
+
+					}
+
+				}
+
+				.education {
+
+					a {
+
+						&:before {
+
+							background-position: -100px 0;
+
+						}
+
+						&:hover {
+
+							&:before {
+
+								background-position: -100px -50px;
+
+							}
+
+						}
+
+						// Active section
+
+						#education & {
+
+							color: $white;
+							background: $black;
+
+							&:before {
+
+								background-position: -100px 0;
+
+							}
+
+						}
+
+						// The landing page for each section is highlighted yellow
+
+						#education.index & {
+
+							color: rgb(255, 210, 79);
+
+							&:before {
+
+								background-position: -100px -50px;
+
+							}
+
+						}
+
+					}
+
+					span {
+
+						&:before {
+
+							background-position: -100px -100px;
+
+						}
+
+					}
+
+				}
+
+				.profile {
+
+					a {
+
+						&:before {
+
+							background-position: -150px 0;
+
+						}
+
+						&:hover {
+
+							&:before {
+
+								background-position: -150px -50px;
+
+							}
+
+						}
+
+						// Active section
+
+						#profile & {
+
+							color: $white;
+							background: $black;
+
+							&:before {
+
+								background-position: -150px 0;
+
+							}
+
+						}
+
+						// The landing page for each section is highlighted yellow
+
+						#profile.index & {
+
+							color: rgb(255, 210, 79);
+
+							&:before {
+
+								background-position: -150px -50px;
+
+							}
+
+						}
+
+					}
+
+					span {
+
+						&:before {
+
+							background-position: -150px -100px;
+
+						}
+
+					}
+
+				}
+
+		}
+
+		// Live Chat
+
+		#live-chat {
+
+			margin: 20px 20px 0 20px;
+
+			a {
+
+				display: block;
+				padding: 15px;
+				border: 1px solid $black;
+				@include border-radius(5px);
+
+				&:hover {
+
+					color: $yellow;
+					border-color: $yellow;
+
+					h3 {
+
+						color: $yellow;
+
+					}
+
+						em {
+
+							color: $yellow;
+
+						}
+
+				}
+
+			}
+
+				h3 {
+
+					margin: 0;
+					@include font-size(16);
+					line-height: (20/16) + em;
+					text-transform: uppercase;
+					text-align: center;
+					color: $orange;
+
+				}
+
+					em {
+
+						display: block;
+						@include freight-sans-bold;
+						color: $white;
+
+					}
+
+		}

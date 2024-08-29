@@ -1,0 +1,7 @@
+compress_assets: off
+gzip_assets: off
+javascript_compressor: uglifier
+
+javascripts:
+  a/js:
+    - a/js/functions.js

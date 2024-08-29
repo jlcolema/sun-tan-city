@@ -1,0 +1,304 @@
+
+/*-------------------------------------------
+	Header
+-------------------------------------------*/
+
+
+#header {
+
+	background: $black;
+	border-bottom: 4px solid $orange;
+
+	@media screen and (min-width: 840px) {
+
+		height: 86px;
+
+	}
+
+	/* The border color changes on some pages */
+
+	// Welcome page (before being signed in)
+
+	#welcome &,
+
+	// Invitation to sign up
+
+	.invitation & {
+
+		border-color: rgb(51, 49, 50);
+
+	}
+
+	.wrap {
+
+		position: relative;
+		height: 71px;
+		max-width: none;
+
+		@media screen and (min-width: 840px) {
+
+			height: 86px;
+
+		}
+
+		.signed-out & {
+
+			max-width: 840px;
+			margin: 0 auto;
+
+		}
+
+	}
+
+}
+
+		/* Logo */
+
+		#logo {
+
+			position: absolute;
+			top: 50%;
+			width: 170px;
+			margin-top: -19px;
+			@include hide-text;
+
+			@media screen and (min-width: 840px) {
+
+				width: 220px;
+				margin-top: -25px;
+
+			}
+
+			// The logo is centered when a user
+			// is not signed in.
+
+			.signed-out & {
+
+				left: 50%;
+				margin-left: -85px;
+
+				@media screen and (min-width: 840px) {
+
+					margin-left: -110px;
+
+				}
+
+			}
+
+			#welcome & {
+
+				@media screen and (max-width: 349px) {
+
+					// The "Sign In" button runs in to the logo when centered;
+					// positioning it to the left for a short time fixes this.
+
+					left: 0;
+					margin-left: 20px;
+
+				}
+
+			}
+
+			a {
+
+				display: block;
+				height: 44px;
+				background: url(/a/img/logo-small.svg);
+
+				.no-svg & {
+
+					background-image: url(/a/img/logo-small.png);
+
+				}
+
+				@media screen and (min-width: 840px) {
+
+					height: 50px;
+					background: url(/a/img/logo.svg);
+
+					.no-svg & {
+
+						background-image: url(/a/img/logo.png);
+
+					}
+
+				}
+
+				&:hover {}
+
+			}
+
+		}
+
+		/* Utilities */
+
+		#utilities {
+
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -22px;
+			@include group;
+			z-index: 5;
+
+			@media screen and (min-width: 840px) {
+
+				margin-top: -24px;
+
+			}
+
+		}
+
+			/* Notifications */
+
+			#notifications {
+
+				position: relative;
+				float: left;
+				width: 60px;
+				height: 44px;
+				background: url(/a/img/notification-bubble.svg) center center no-repeat;
+				cursor: pointer;
+
+				.no-svg & {
+
+					background-image: url(/a/img/notification-bubble.png);
+
+				}
+
+				.unread-count {
+
+					position: absolute;
+					left: 32px;
+					top: 5px;
+					min-width: 16px;
+					height: 16px;
+					padding: 1px 0 0 0;
+					@include font-size(12);
+					line-height: (14/12) + em;
+					text-align: center;
+					color: $black;
+					background: $yellow;
+					@include border-radius(50%);
+					z-index: 5;
+
+				}
+
+				.notifications-panel {}
+
+				// While signed out, this is not visible.
+
+				.signed-out & {
+
+					display: none;
+
+				}
+
+			}
+
+			/* Menu Toggle */
+
+			#menu {
+
+				float: left;
+				width: 60px;
+				height: 44px;
+				background: url(/a/img/nav-toggle.svg) center center no-repeat;
+				border-left: 1px solid rgb(65, 64, 66);
+				@include hide-text;
+				cursor: pointer;
+
+				@media screen and (min-width: 840px) {
+
+					display: none;
+
+				}
+
+				.no-svg & {
+
+					background-image: url(/a/img/nav-toggle.png);
+
+				}
+
+				// While signed out, this is not visible.
+
+				.signed-out & {
+
+					display: none;
+
+				}
+
+			}
+
+			/* Sign In / Out */
+
+			.sign-in {
+
+				display: none;
+				@include font-size(14);
+				line-height: (16/14) + em;
+				text-transform: uppercase;
+				border-left: 1px solid rgb(65, 64, 66);
+
+				#welcome & {
+
+					@media screen and (max-height: 440px) {
+
+						display: block;
+
+					}
+
+				}
+
+				a {
+
+					display: block;
+					height: 44px;
+					padding: 13px 15px 0 15px;
+					color: $white;
+
+					&:hover {}
+
+				}
+
+			}
+
+			.sign-out {
+
+				display: none;
+				@include font-size(14);
+				line-height: (16/14) + em;
+				text-transform: uppercase;
+
+				@media screen and (min-width: 840px) {
+
+					float: left;
+					display: block;
+					border-left: 1px solid rgb(65, 65, 66);
+
+				}
+
+				a {
+
+					display: block;
+					height: 44px;
+					padding: 13px 15px 0 15px;
+					color: $white;
+
+					&:hover {}
+
+				}
+
+				// Temporarily hidden...
+
+				.signed-in & {}
+
+				// While signed out, this is not visible.
+
+				.signed-out & {
+
+					display: none;
+
+				}
+
+			}

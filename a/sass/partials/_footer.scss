@@ -1,0 +1,162 @@
+
+/*-------------------------------------------
+	Footer
+-------------------------------------------*/
+
+
+#footer {
+
+	color: $white;
+	background: $black;
+
+	.wrap {
+
+		padding-top: 25px;
+		height: 120px;
+
+		@media screen and (min-width: 560px) {
+
+			height: 80px;
+			@include group;
+
+		}
+
+		.signed-out & {
+
+			max-width: 880px;
+			margin: 0 auto;
+
+		}
+
+	}
+
+}
+
+		.connect {
+
+			margin: 0 0 25px 0;
+
+			@media screen and (min-width: 560px) {
+
+				float: left;
+				margin: 0;
+
+			}
+
+			ul {
+
+				text-align: center;
+
+			}
+
+				li {
+
+					display: inline-block;
+					margin: 0 4px;
+					@include hide-text;
+
+				}
+
+				// Specific social connections
+
+				.facebook {
+
+					a {
+
+						background-color: rgb(11, 148, 210);
+
+					}
+
+				}
+
+				.twitter {
+
+					a {
+
+						background-color: rgb(143, 195, 234);
+						background-position: -30px 0;
+
+					}
+
+				}
+
+				.pinterest {
+
+					a {
+
+						background-color: rgb(234, 81, 121);
+						background-position: -60px 0;
+
+					}
+
+				}
+
+				.instagram {
+
+					a {
+
+						background-color: rgb(107, 192, 109);
+						background-position: -90px 0;
+
+					}
+
+				}
+
+				.youtube {
+
+					a {
+
+						background-color: rgb(255, 219, 126);
+						background-position: -120px 0;
+
+					}
+
+				}
+
+					a {
+
+						display: block;
+						width: 30px;
+						height: 30px;
+						background: url(/a/img/connect.svg);
+						@include border-radius(50%);
+
+						.no-svg & {
+
+							background-image: url(/a/img/connect.png);
+
+						}
+
+						&:hover {}
+
+					}
+
+		}
+
+		#copyright {
+
+			margin: 0;
+			@include font-size(12);
+			line-height: (14/12) + em;
+			text-transform: uppercase;
+			text-align: center;
+
+			@media screen and (min-width: 560px) {
+
+				position: relative;
+				top: 8px;
+				float: right;
+
+			}
+
+			a {
+
+				color: $white;
+
+				&:hover {}
+
+			}
+
+			span {}
+
+		}

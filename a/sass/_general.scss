@@ -1,0 +1,713 @@
+
+//-------------------------------------------
+//	Colors
+//-------------------------------------------
+
+
+// Grayscale
+
+
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+
+
+// Gray-like
+
+
+// rgb(35, 31, 32);
+// rgb(51, 49, 50);
+// rgb(109, 110, 113);
+// rgb(209, 211, 212);
+
+
+// Colors
+
+
+$orange: rgb(244, 123, 32);
+// rgb(251, 184, 133); Lighter version of above (may be able to drop by using "lighten" or  something similar)
+
+$light-orange: rgb(255, 210, 79);
+// rgb(255, 229, 166); Lighter version of above (may be able to drop by using "lighten" or  something similar)
+
+$yellow: rgb(255, 209, 79);
+// rgb(253, 246, 176); Lighter version of above (may be able to drop by using "lighten" or  something similar)
+
+$green: rgb(171, 189, 56);
+// rgb(227, 225, 119); Lighter version of above (may be able to drop by using "lighten" or  something similar)
+
+$teal: rgb(1, 165, 153);
+// rgb(196, 229, 221); Lighter version of above (may be able to drop by using "lighten" or  something similar)
+
+$blue: rgb(11, 148, 210);
+// rgb(191, 230, 242); Lighter version of above (may be able to drop by using "lighten" or  something similar)
+
+$pink: rgb(234, 81, 121);
+// rgb(245, 152, 162); Lighter version of above (may be able to drop by using "lighten" or  something similar)
+
+$red: rgb(227, 27, 35);
+// rgb(240, 147, 118); Lighter version of above (may be able to drop by using "lighten" or  something similar)
+
+
+//-------------------------------------------
+//	Fonts
+//-------------------------------------------
+
+
+// Freight Sans Pro (https://typekit.com/fonts/freight-sans-pro)
+
+
+// Book
+
+
+@mixin freight-sans-book {
+
+	font-family: "freight-sans-pro-n4", "freight-sans-pro", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+
+// Book Italic
+
+
+@mixin freight-sans-book-italic {
+
+	font-family: "freight-sans-pro-i4", "freight-sans-pro", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-style: italic;
+
+}
+
+
+// Medium
+
+
+@mixin freight-sans-medium {
+
+	font-family: "freight-sans-pro-n5", "freight-sans-pro", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+
+}
+
+
+// Medium Italic
+
+
+@mixin freight-sans-medium-italic {
+
+	font-family: "freight-sans-pro-i5", "freight-sans-pro", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	font-style: italic;
+
+}
+
+
+// Bold
+
+
+@mixin freight-sans-bold {
+
+	font-family: "freight-sans-pro-n7", "freight-sans-pro", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+
+}
+
+
+// Bold Italic
+
+
+@mixin freight-sans-bold-italic {
+
+	font-family: "freight-sans-pro-i7", "freight-sans-pro", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+
+}
+
+
+// Proxima Nova (https://typekit.com/fonts/proxima-nova)
+
+
+// Regular
+
+
+@mixin proxima-nova-regular {
+
+	font-family: "proxima-nova-n4", "proxima-nova", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+
+// Regular Italic
+
+
+@mixin proxima-nova-regular-italic {
+
+	font-family: "proxima-nova-i4", "proxima-nova", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-style: italic;
+
+}
+
+
+// Bold
+
+
+@mixin proxima-nova-bold {
+
+	font-family: "proxima-nova-n7", "proxima-nova", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+
+}
+
+
+// Bold Italic
+
+
+@mixin proxima-nova-bold-italic {
+
+	font-family: "proxima-nova-i7", "proxima-nova", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+
+}
+
+
+// Delius (http://www.google.com/fonts/specimen/Delius)
+
+
+// Normal
+
+
+@mixin delius {
+
+	font-family: "Delius", cursive;
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+
+//-------------------------------------------
+//	Grid
+//-------------------------------------------
+
+
+@mixin wrap {
+
+	// Actual maximum width is 1100px.
+
+	// Not sure if this is even needed anymmore.
+
+	// max-width: 880px;
+
+	// margin: 0 auto;
+	padding: 0 20px;
+
+}
+
+
+/*-------------------------------------------
+	General Selectors
+-------------------------------------------*/
+
+
+html {
+
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	background: $white;
+
+}
+
+body {
+
+	position: relative;
+	@include font-size(16);
+	line-height: (21/16) + em;
+	@include proxima-nova-regular;
+	color: rgb(109, 110, 113);
+	// background: rgb(35, 31, 32);
+	background: $white;
+
+}
+
+
+/* Block Level */
+
+
+h1 {
+
+	margin-bottom: (24/36) + em;
+	@include font-size(36);
+	line-height: (42/36) + em;
+	@include freight-sans-bold;
+	text-transform: uppercase;
+	color: $black;
+
+}
+
+h2 {
+
+	margin-bottom: (26/26) + em;
+	@include font-size(26);
+	line-height: (30/26) + em;
+	@include freight-sans-medium;
+	text-transform: uppercase;
+	color: $black;
+
+}
+
+h3 {
+
+	margin-bottom: (22/22) + em;
+	@include font-size(22);
+	line-height: (26/22) + em;
+	@include freight-sans-medium;
+	text-transform: uppercase;
+	color: $black;
+
+}
+
+h4 {
+
+	margin-bottom: (16/16) + em;
+	@include font-size(16);
+	line-height: (21/16) + em;
+	@include freight-sans-medium;
+	text-transform: uppercase;
+
+}
+
+h5 {
+
+	// margin-bottom: (n/n) + em;
+	// @include font-size(14);
+	// line-height: (18/14) + em;
+	// @include din-bold;
+
+}
+
+h6 {
+
+	// margin-bottom: (n/n) + em;
+	// @include font-size(14);
+	// line-height: (18/14) + em;
+	// @include din-bold;
+
+}
+
+p {
+
+	margin-bottom: (21/16) + em;
+
+	&:last-of-type {}
+
+}
+
+ol {
+
+	li {}
+
+}
+
+ul {
+
+	li {}
+
+}
+
+	li {}
+
+dl {}
+
+	dt {}
+
+	dd {}
+
+table {
+
+	margin: 0 0 20px 0;
+	width: 100%;
+	border: 1px solid rgb(147, 149, 152);
+
+}
+
+thead {
+
+	background: rgb(147, 149, 152);
+
+}
+
+th {
+
+	padding: 15px;
+	@include font-size(14);
+	line-height: (16/14) + em;
+	@include proxima-nova-bold;
+	text-transform: uppercase;
+	text-align: left;
+	color: $white;
+	border-right: 1px solid $white;
+
+	&:last-of-type {
+
+		border: none;
+
+	}
+
+}
+
+tbody {}
+
+tfoot {}
+
+td {
+
+	padding: 5px 15px;
+
+}
+
+caption {}
+
+figure {
+
+	img {
+
+		margin: 0 0 10px 0;
+
+	}
+
+}
+
+figcaption {
+
+	@include font-size(14);
+	line-height: (17/14) + em;
+
+}
+
+blockquote {
+
+	p {}
+
+}
+
+
+/* Inline */
+
+
+i,
+em,
+cite {
+
+	@include proxima-nova-regular-italic;
+
+}
+
+cite {
+
+	&:before {
+
+		// content: "— ";
+
+	}
+
+}
+
+b,
+strong {
+
+	@include proxima-nova-bold;
+
+}
+
+a {
+
+	color: $blue;
+	text-decoration: none;
+
+	&:link {}
+
+	&:hover,
+	&:focus {}
+
+}
+
+img {
+
+	display: block;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+
+}
+
+small {
+
+	@include font-size(12);
+	line-height: (14/12) + em;
+
+}
+
+code {}
+
+sub, sup {
+
+	// line-height: 0;
+
+}
+
+::-moz-selection {
+
+	// color: $black;
+	background: pink;
+	text-shadow: none;
+
+}
+
+::selection {
+
+	// color: $black;
+	background: pink;
+	text-shadow: none;
+
+}
+
+ins {
+
+	// color: $black;
+	// background-color: #fcd700;
+	// text-decoration: none;
+
+}
+
+mark {
+
+	// color: $black;
+	// background-color: #fcd700;
+	// font-style: italic;
+	// font-weight: bold;
+
+}
+
+
+// Mozilla doesn't style place holders by default
+
+
+input:-moz-placeholder {}
+
+textarea:-moz-placeholder {}
+
+
+/*-------------------------------------------
+	Forms
+-------------------------------------------*/
+
+
+form {
+
+	ol {}
+
+		li {
+
+			margin: 0 0 20px 0;
+
+		}
+
+}
+
+fieldset {}
+
+legend {}
+
+label {
+
+	display: block;
+	margin: 0 0 10px 0;
+	@include font-size(16);
+	line-height: (20/16) + em;
+	color: rgb(109, 110, 113);
+
+	// :active, :focus
+
+	// color: rgb(11, 148, 210);
+
+	// error
+
+	// color: rgb(238, 53, 36);
+
+}
+
+input {
+
+	@include font-size(16);
+	line-height: (21/16) + em;
+	@include proxima-nova-regular;
+	outline: none;
+
+	&[type="text"],
+	&[type="search"],
+	&[type="password"],
+	&[type="email"],
+	&[type="tel"] {
+
+		// Override general styles applied to iOS devices.
+
+		-webkit-appearance: none;
+
+		width: 100%;
+		padding: 0 5px;
+		height: 30px;
+		color: rgb(109, 110, 113);
+		border: 1px solid rgb(109, 110, 113);
+		@include border-radius(2px);
+
+		&::-webkit-input-placeholder {
+
+			color: rgb(209, 211, 212);
+
+		}
+
+		&:active {
+
+			// border-color: $blue;
+
+		}
+
+		&:focus {
+
+			// border-color: $blue;
+
+		}
+
+		/* @todo Add error state styles to text and search inputs */
+
+		// error {
+
+			// border-color: rgb(238, 53, 36);
+
+		// }
+
+	}
+
+	&[type="checkbox"] {
+
+		position: relative;
+		top: -3px;
+		margin: 0 5px 0 0;
+
+	}
+
+	&[type="radio"] {
+
+		position: relative;
+		top: -2px;
+		margin: 0 5px 0 0;
+
+	}
+
+	&[type="button"],
+	&[type="submit"] {
+
+		// Override general styles applied to iOS devices.
+
+		-webkit-appearance: none;
+
+		margin: 0 0 20px 0;
+		text-transform: uppercase;
+		color: $white;
+		background: $orange;
+		@include border-radius(2px);
+
+	}
+
+}
+
+textarea {
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+	width: 100%;
+	max-width: 100%;
+	min-height: 90px;
+	padding: 5px;
+	@include font-size(16);
+	line-height: (21/16) + em;
+	@include proxima-nova-regular;
+	color: rgb(109, 110, 113);
+	border: 1px solid rgb(109, 110, 113);
+	outline: none;
+	@include border-radius(2px);
+
+	&::-webkit-input-placeholder {
+
+		color: rgb(209, 211, 212);
+
+	}
+
+	&:active {}
+
+	&:focus {
+
+		// border-color: $blue;
+
+	}
+
+	/* @todo Add error state styles to textarea inputs */
+
+	// error {
+
+		// border-color: rgb(238, 53, 36);
+
+	// }
+
+}
+
+select {
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+	@include font-size(16);
+	line-height: (21/16) + em;
+	@include proxima-nova-regular;
+	outline: none;
+
+}
+
+button {
+
+	// Override general styles applied to iOS devices.
+
+	-webkit-appearance: none;
+
+	margin: 10px 0 20px 0;
+	padding: 10px 30px;
+	@include font-size(16);
+	line-height: (21/16) + em;
+	@include proxima-nova-regular;
+	text-transform: uppercase;
+	color: $white;
+	background: $orange;
+	border: none;
+	@include border-radius(2px);
+	outline: none;
+
+	&:hover {
+
+		background-color: lighten($orange, 20%);
+
+	}
+
+}

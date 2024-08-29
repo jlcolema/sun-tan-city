@@ -1,0 +1,117 @@
+
+/*-------------------------------------------
+	Layouts
+-------------------------------------------*/
+
+
+html {
+
+	height: 100%;
+
+}
+
+body {
+
+	height: 100%;
+
+}
+
+	#page {
+
+		clear: both;
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin-bottom: -120px;
+
+		@media screen and (min-width: 560px) {
+
+			margin-bottom: -80px;
+
+		}
+
+		.signed-in & {
+
+			@media screen and (min-width: 840px) {
+
+				background: url(/a/img/nav-background.png) 0 0 repeat-y;
+
+			}
+
+		}
+
+	}
+
+		#header {}
+
+		#nav {}
+
+		#section {}
+
+		#content {
+
+			position: relative;
+			padding: 40px 0;
+			height: 100%;
+			background: $white;
+
+			.signed-in & {
+
+				@media screen and (min-width: 840px) {
+
+					// A min-height is set to clear space for the navigation
+					// when it displays on the side bar.
+
+					min-height: 340px;
+
+					margin-left: 250px;
+
+				}
+
+			}
+
+			.signed-out & {
+
+				// The navigation does not display in areas where one is
+				// signed out, so, margin-left is not needed.
+
+				margin: 0 auto;
+
+			}
+
+			.wrap {
+
+				max-width: 880px;
+
+				@media screen and (min-width: 840px) {
+
+					max-width: 920px;
+					padding: 0 40px;
+
+				}
+
+				.signed-out & {
+
+					margin: 0 auto;
+
+				}
+
+			}
+
+		}
+
+			#main {}
+
+		#page-shim {
+
+			height: 120px;
+
+			@media screen and (min-width: 560px) {
+
+				height: 80px;
+
+			}
+
+		}
+
+	#footer {}
